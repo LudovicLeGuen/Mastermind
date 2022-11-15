@@ -1,108 +1,219 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# mastermind-game
 
-Welcome LudovicLeGuen,
+[Click here to access live project](#)
+## Table of contents
+1. [Introduction](#Introduction)
+2. [UX](#UX)
+    1. [Ideal User Demographic](#Ideal-User-Demographic)
+    2. [User Stories](#User-Stories)
+    3. [Development Planes](#Development-Planes)
+    4. [Design](#Design)
+3. [Features](#Features)
+    1. [Design Features](#Design-Features) 
+    2. [Existing Features](#Existing-Features)
+    3. [Features to Implement in the future](#Features-to-Implement-in-the-future)
+4. [Issues and Bugs](#Issues-and-Bugs)
+5. [Technologies Used](#Technologies-Used)
+     1. [Main Languages Used](#Main-Languages-Used)
+     3. [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
+6. [Testing](#Testing)
+     1. [Testing.md](TESTING.md)
+7. [Deployment](#Deployment)
+     1. [Deploying on GitHub Pages](#Deploying-on-GitHub-Pages)
+8. [Credits](#Credits)
+     1. [Media](#Media)
+     2. [Code](#Code)
+9. [Acknowledgements](#Acknowledgements)
+***
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Introduction
+The website allows users to play the Mastermind boardgame. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+This website is the second Milestone project (out of five) required to obtain the Diploma in Software development at The Code Institute.
 
-## Gitpod Reminders
+The requirements of this project are:
+* Build an interactive Front-End web application 
+* Allow users to actively engage with data
+* Displays information accordingly to users preferred goals
+* Use HTML5, CSS3 and Javascript. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+[Back to top ⇧](#mastermind-game)
 
-`python3 -m http.server`
+## UX
+### Ideal User Demographic
+There are two types of ideal users:
+* Experienced player
+* New user
 
-A blue button should appear to click: _Make Public_,
+### User-Stories
+#### Experienced player Goals
+* As an experienced player, I want to see a beautiful website.
+* As an experienced player, I want a website easy to navigate.
+* As an experienced player, I want to play a game instantaneously.
 
-Another blue button should appear to click: _Open Browser_.
+#### New User Goals
+* As a new user, I want an intuitive and simple UI.
+* As a new user, I want rules to be easily accessible.
+* As a new user, I want a site pleasing to the eye.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+[Back to top ⇧](#mastermind-game)
 
-A blue button should appear to click: _Make Public_,
+### Development-Planes
+The website has to answer the aforementioned needs of all users types and therefore must have a single page containing the board game and the instructions.
 
-Another blue button should appear to click: _Open Browser_.
+#### Strategy
+The website will focus on the following target audience
+* Audience
+    * New Users
+    * Experienced players
+    
+* Demographic
+    * All ages
+    
+* Psycho Characteristics
+    * Curious
+    * Determined
+    * Puzzle solver
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+All Users must be able to:
+    * Play the Mastermind board game
+    * Find the instructions
+    * Restart a game at will
+    * Know when they win and loose
+    * Play each game with a random code to break 
 
-To log into the Heroku toolbelt CLI:
+   
+#### Scope
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Now that we have established the goals of the website we can deduce the necessary features and content:
+* Required Content
+    * The board game itslef
+    * The instructions
+    * Win and loose modals
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* Required functionality
+    * A start/reset button
+    * An instruction button
+    * Modals when user wins, looses or see instructions
 
-------
+#### Structure
 
-## Release History
+The website will consist of 1 page. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+   1. **A Home page** hosting the game. All necessary information (such as rules) will be displayed uings Modals.   
+    
+#### Skeleton
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+With the structure now in place the designer has created wireframes on [Balsamiq Wireframes](https://balsamiq.com) as a base to build the website. 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<details>
+<summary>Desktop Wireframes</summary>
+    
+![Home page](assets/readme-files/desktop.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+</details> 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<details>
+<summary>Tablet Wireframes</summary>
+    
+![About page](assets/readme-files/tablet.png)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+</details> 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<details>
+<summary>Mobile Wireframes</summary>
+    
+![Sign up page](assets/readme-files/mobile.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+</details> 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+<details>
+<summary>Winning Modal Wireframes</summary>
+    
+![Sign up page](assets/readme-files/win-modal.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+</details> 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<details>
+<summary>loosing Modal Wireframes</summary>
+    
+![Sign up page](assets/readme-files/loose-modal.png)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+</details> 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+<details>
+<summary>Instructions Wireframes</summary>
+    
+![Sign up page](assets/readme-files/rules-modal.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+</details> 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+[Back to top ⇧](#mastermind-game)
 
-## FAQ about the uptime script
+### Design
+#### Colour Scheme
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+#### Typography
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+[Back to top ⇧](#Abyss-diving-club)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Features
+### Design Features
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Existing Features
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Features to Implement in the future
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+[Back to top ⇧](#mastermind-game)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Issues and Bugs 
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## Technologies Used
+### Main Languages Used
+* HTML5
+* CSS3
+* Javascript
+### Frameworks, Libraries & Programs Used
 
----
+[Back to top ⇧](#mastermind-game)
 
-Happy coding!
+## Testing
+
+
+## Deployment
+The site was developped on Gitpod, commiting and pushing to github.
+
+### Deploying on GitHub Pages
+To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
+
+1. Log into GitHub (or create an account if necessary).
+2. Choose the GitHub Repository.
+3. Select Settings from the menu items.
+4. Select "Pages" from the left hand menu.
+5. Under "Branch" click the drop-down menu labelled "None" and select "Main".
+6. Click "Save".
+7. Wait a few seconds up to a few minutes and refresh the page.
+8. The site is now deployed and a link is provided.
+    
+[Back to top ⇧](#mastermind-game)
+
+## Credits 
+### Media
+
+
+### Code 
+
+
+## Acknowledgements
+
+
+[Back to top ⇧](#mastermind-game)
+
+***
+
