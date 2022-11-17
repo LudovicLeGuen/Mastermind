@@ -68,6 +68,7 @@ body {
     margin-top: 0px;
     border: solid 1px red;
 }
+
 .peg-holder {
     margin: auto;
     background-color: green;
@@ -105,19 +106,71 @@ body {
 
 .color-picker {
     display: grid;
-    grid-template-columns: repeat(3, 75px);
-    grid-template-rows: repeat(2, 75px);
-    width: 225px;
-    height: 150px;
-    border: 5px solid black;
+    grid-template-columns: repeat(3, 65px);
+    grid-template-rows: repeat(2, 65px);
+    background-color: #d98c71;
+    width: 195px;
+    height: 130px;
+    border: 1px solid black;
     margin: 0 auto;
     margin-top: 10px;
 }
 
+#color-blue {
+    background-color: #a3e6ec;
+    border-radius: 10px;
+    border: solid 1px black;
+    padding: 3px;
+}
+
+#color-red {
+    background-color: #f21905;
+    border-radius: 10px;
+    border: solid 1px black;
+    padding: 3px;
+}
+
+#color-yellow {
+    background-color: #f2e30f;
+    border-radius: 10px;
+    border: solid 1px black;
+    padding: 3px;
+}
+
+#color-green {
+    background-color: #6ad5a5;
+    border-radius: 10px;
+    border: solid 1px black;
+    padding: 3px;
+}
+
+#color-orange {
+    background-color: #f25c05;
+    border-radius: 10px;
+    border: solid 1px black;
+    padding: 3px;
+}
+
+#color-purple {
+    background-color: #dd58b3;
+    border-radius: 10px;
+    border: solid 1px black;
+    padding: 3px;
+}
+
 .submit {
     height: 50px;
-    width: 225px;
+    width: 195px;
+
     background-color: green;
+    border: 1px solid black;
+
+    color: white;
+    font-size: 350%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* footer and social network links*/
