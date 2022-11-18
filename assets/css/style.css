@@ -98,64 +98,59 @@ body {
     border-radius: 50px;
 }
 
-#side-board {
-    height: auto;
-    width: auto;
 
-}
 
 .color-picker {
     display: grid;
-    grid-template-columns: repeat(3, 65px);
+    grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(2, 65px);
     background-color: #d98c71;
-    width: 195px;
+    width: 100%;
     height: 130px;
-    border: 1px solid black;
     margin: 0 auto;
     margin-top: 10px;
 }
 
-#color-blue {
-    background-color: #a3e6ec;
+.blue {
+    background-color: blue;
     border-radius: 10px;
     border: solid 1px black;
-    padding: 3px;
+    padding: 5px;
 }
 
-#color-red {
-    background-color: #f21905;
+.red {
+    background-color: red;
     border-radius: 10px;
     border: solid 1px black;
-    padding: 3px;
+    padding: 5px;
 }
 
-#color-yellow {
-    background-color: #f2e30f;
+.yellow {
+    background-color: yellow;
     border-radius: 10px;
     border: solid 1px black;
-    padding: 3px;
+    padding: 5px;
 }
 
-#color-green {
-    background-color: #6ad5a5;
+.green {
+    background-color: green;
     border-radius: 10px;
     border: solid 1px black;
-    padding: 3px;
+    padding: 5px;
 }
 
-#color-orange {
-    background-color: #f25c05;
+.orange {
+    background-color:orange;
     border-radius: 10px;
     border: solid 1px black;
-    padding: 3px;
+    padding: 5px;
 }
 
-#color-purple {
-    background-color: #dd58b3;
+.purple {
+    background-color: purple;
     border-radius: 10px;
     border: solid 1px black;
-    padding: 3px;
+    padding: 5px;
 }
 
 .submit {
