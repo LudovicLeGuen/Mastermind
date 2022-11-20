@@ -102,7 +102,7 @@ body {
 
 .color-picker {
     display: grid;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(3, 33.3%);
     grid-template-rows: repeat(2, 65px);
     background-color: #d98c71;
     width: 100%;
@@ -116,6 +116,8 @@ body {
     border-radius: 10px;
     border: solid 1px black;
     padding: 5px;
+    margin: 2px;
+
 }
 
 .red {
@@ -123,6 +125,7 @@ body {
     border-radius: 10px;
     border: solid 1px black;
     padding: 5px;
+    margin: 2px;
 }
 
 .yellow {
@@ -130,6 +133,7 @@ body {
     border-radius: 10px;
     border: solid 1px black;
     padding: 5px;
+    margin: 2px;
 }
 
 .green {
@@ -137,6 +141,7 @@ body {
     border-radius: 10px;
     border: solid 1px black;
     padding: 5px;
+    margin: 2px;
 }
 
 .orange {
@@ -144,6 +149,7 @@ body {
     border-radius: 10px;
     border: solid 1px black;
     padding: 5px;
+    margin: 2px;
 }
 
 .purple {
@@ -151,14 +157,15 @@ body {
     border-radius: 10px;
     border: solid 1px black;
     padding: 5px;
+    margin: 2px;
 }
 
 .submit {
     height: 50px;
-    width: 195px;
+    width: 100%;
 
     background-color: green;
-    border: 1px solid black;
+    border: solid 1px black;    
 
     color: white;
     font-size: 350%;
@@ -166,6 +173,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+   
+    margin: 2px;
 }
 
 /* footer and social network links*/
