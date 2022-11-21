@@ -91,7 +91,7 @@ body {
 
 .color-holder {
     margin: auto;
-    background-color: blue;
+    border: solid 1px black;
     padding: 10px auto;
     height: 30px;
     width: 30px;

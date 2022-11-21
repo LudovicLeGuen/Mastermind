@@ -40,8 +40,10 @@ for (var i = 0; i < colorCode.length; i++) {
                 const backgroundColor = event.target.style.backgroundColor; // event.target allows me to toggle colors only on the clicked button
 
                 if (backgroundColor === '') {
-                        event.target.style.backgroundColor = 'red';
-                } else if (backgroundColor === 'red') {
+                        event.target.style.backgroundColor = 'blue';
+                } else if (backgroundColor === 'blue') {
+                        event.target.style.backgroundColor = 'yellow';
+                }  else if (backgroundColor === 'red') {
                         event.target.style.backgroundColor = 'yellow';
                 } else if (backgroundColor === 'yellow') {
                         event.target.style.backgroundColor = 'green';
