@@ -1,4 +1,3 @@
-
 /**
  * The secret code of 4 colors is randomly created
  * and the users will have to guess it.
@@ -8,7 +7,7 @@ let final = randomCode()
 
 // Creates 4 colors randomly
 function randomCode() {
-        const randomFinal = [...new Array(4)].map(color => {
+        var randomFinal = [...new Array(4)].map(color => {
                 const random = Math.floor(Math.random() * Math.floor(colors.length));
                 return colors[random];
         });
@@ -67,8 +66,27 @@ function createPlayerGuess() {
         let guess4 = obj4.style.backgroundColor
         playerGuess[3] = guess4;
 
+        console.log(playerGuess);
         return playerGuess;
 }
+
+
+function whitePeg() {
+        var white = 0; //hint. The white variable is named for the board game; before I selected white as a better color for this program.
+        for (i = 0; i < 4; i++) {
+                for (j = 0; j < 4; j++) { //these for loops go through both the CPU's arr and the player's guess array.
+                        if (final[i] == playerGuess[j]) { //if the guess and the CPU's color is the same...
+                                white++; //increase white, then change the player's array to 10 in that position so it isn't counted again.
+                                playerGuess[j] = 10;
+                                break;
+                        }
+                }
+        }
+        console.log(white);
+
+        return white;
+}
+
 
 function compareCode() {
 
