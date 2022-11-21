@@ -70,6 +70,20 @@ function createPlayerGuess() {
         return playerGuess;
 }
 
+function revealSecret() {
+        let arr = final
+        let secret1 = Array.of[document.getElementById("secret-code")]
+        let secretColor1 = arr[0]
+        let secretColor2 = arr[1]
+        let secretColor3 = arr[2]
+        let secretColor4 = arr[3]
+        document.getElementById("secret-color-1").style.backgroundColor = secretColor1;
+        document.getElementById("secret-color-2").style.backgroundColor = secretColor2;
+        document.getElementById("secret-color-3").style.backgroundColor = secretColor3;
+        document.getElementById("secret-color-4").style.backgroundColor = secretColor4;
+
+}
+
 /**
  * The function counts the number of misplaced 
  * colors in the user guess
@@ -105,12 +119,35 @@ function compareCodes() {
                         //TBD
                 }
         if (redPeg == 4) {
-                //call function youWin to open Modal
+                revealSecret()
                 document.getElementById("submit").disabled = true;
+                youWin()
                 console.log('YOU WIN')
         } else {
                 var white = whitePeg(playerGuess) - redPeg;
                 console.log("correct: " + redPeg);
                 console.log("misplaced: " + white);
+        }
+};
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+function youWin() {
+        modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+        modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+        if (event.target == modal) {
+                modal.style.display = "none";
         }
 }
