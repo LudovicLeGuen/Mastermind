@@ -16,7 +16,7 @@ function randomCode() {
 }
 
 /**
- * User toggles colors to create a 4 colors guess in a row.
+ * User toggles colors to create a 4 colors guess.
  */
 let colorCode = document.getElementsByClassName("color-holder");
 
@@ -70,7 +70,10 @@ function createPlayerGuess() {
         return playerGuess;
 }
 
-
+/**
+ * The function counts the number of misplaced 
+ * colors in the user guess
+ */
 function whitePeg(playerGuess) {
         var whitePeg = 0;
         for (i = 0; i < 4; i++) {
@@ -87,8 +90,12 @@ function whitePeg(playerGuess) {
         return whitePeg;
 }
 
-
-function compareCode() {
+/**
+ * The function compares the user's guess array 
+ * to the randomly generated array of color at
+ * the start of the game.
+ */
+function compareCodes() {
         var playerGuess = createPlayerGuess()
         var redPeg = 0
         for (i = 0; i < 4; i++)
@@ -98,12 +105,12 @@ function compareCode() {
                         //TBD
                 }
         if (redPeg == 4) {
-                //call function youWin 
-                //disable submit button
+                //call function youWin to open Modal
+                document.getElementById("submit").disabled = true;
                 console.log('YOU WIN')
         } else {
                 var white = whitePeg(playerGuess) - redPeg;
-                console.log("red: " + redPeg);
-                console.log("white: " + white);
+                console.log("correct: " + redPeg);
+                console.log("misplaced: " + white);
         }
 }

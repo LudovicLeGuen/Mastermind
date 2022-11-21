@@ -51,7 +51,7 @@ body {
 }
 
 .secret-color {
-    background-color: black;
+    background-color: grey;
     padding: 10px auto;
     height: 50px;
     width: 50px;
@@ -160,7 +160,7 @@ body {
     margin: 2px;
 }
 
-.submit {
+#submit {
     height: 50px;
     width: 100%;
 
