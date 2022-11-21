@@ -71,31 +71,39 @@ function createPlayerGuess() {
 }
 
 
-function whitePeg() {
-        var white = 0; //hint. The white variable is named for the board game; before I selected white as a better color for this program.
+function whitePeg(playerGuess) {
+        var whitePeg = 0;
         for (i = 0; i < 4; i++) {
-                for (j = 0; j < 4; j++) { //these for loops go through both the CPU's arr and the player's guess array.
-                        if (final[i] == playerGuess[j]) { //if the guess and the CPU's color is the same...
-                                white++; //increase white, then change the player's array to 10 in that position so it isn't counted again.
+                for (j = 0; j < 4; j++) {
+                        if (final[i] == playerGuess[j]) {
+                                whitePeg++;
                                 playerGuess[j] = 10;
                                 break;
                         }
                 }
         }
-        console.log(white);
+        console.log(whitePeg);
 
-        return white;
+        return whitePeg;
 }
 
 
 function compareCode() {
-
-}
-
-function pegCreate() {
-
-}
-
-function incrementRow() {
-
+        var playerGuess = createPlayerGuess()
+        var redPeg = 0
+        for (i = 0; i < 4; i++)
+                if (playerGuess[i] == final[i]) {
+                        redPeg++;
+                } else {
+                        //TBD
+                }
+        if (redPeg == 4) {
+                //call function youWin 
+                //disable submit button
+                console.log('YOU WIN')
+        } else {
+                var white = whitePeg(playerGuess) - redPeg;
+                console.log("red: " + redPeg);
+                console.log("white: " + white);
+        }
 }
