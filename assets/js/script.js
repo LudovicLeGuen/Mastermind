@@ -1,16 +1,3 @@
-var guessings = {
-        "row1": [],
-        "row2": [],
-        "row3": [],
-        "row4": [],
-        "row5": [],
-        "row6": [],
-        "row7": [],
-        "row8": [],
-        "row9": [],
-        "row10": [],
-
-}
 
 /**
  * The secret code of 4 colors is randomly created
@@ -30,20 +17,20 @@ function randomCode() {
 }
 
 /**
- * User toggles colors to create a code guess.
+ * User toggles colors to create a 4 colors guess in a row.
  */
-const colorCode = document.getElementsByClassName("color-holder");
+let colorCode = document.getElementsByClassName("color-holder");
 
 for (var i = 0; i < colorCode.length; i++) {
         colorCode[i].addEventListener('click', function onClick(event) { // loop through all elements with the "color-holder" Class attribute
 
-                const backgroundColor = event.target.style.backgroundColor; // event.target allows me to toggle colors only on the clicked button
+                const backgroundColor = event.target.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
 
                 if (backgroundColor === '') {
                         event.target.style.backgroundColor = 'blue';
                 } else if (backgroundColor === 'blue') {
-                        event.target.style.backgroundColor = 'yellow';
-                }  else if (backgroundColor === 'red') {
+                        event.target.style.backgroundColor = 'red';
+                } else if (backgroundColor === 'red') {
                         event.target.style.backgroundColor = 'yellow';
                 } else if (backgroundColor === 'yellow') {
                         event.target.style.backgroundColor = 'green';
@@ -57,8 +44,30 @@ for (var i = 0; i < colorCode.length; i++) {
         })
 };
 
-function createGuesscode() {
+/**
+ * The function creates an array out of the colors chosen 
+ * by the player to break the final color code.
+ */
+function createPlayerGuess() {
+        var playerGuess = []
 
+        let obj1 = document.getElementById("g1");
+        let guess1 = obj1.style.backgroundColor
+        playerGuess[0] = guess1;
+
+        let obj2 = document.getElementById("g2");
+        let guess2 = obj2.style.backgroundColor
+        playerGuess[1] = guess2;
+
+        let obj3 = document.getElementById("g3");
+        let guess3 = obj3.style.backgroundColor
+        playerGuess[2] = guess3;
+
+        let obj4 = document.getElementById("g4");
+        let guess4 = obj4.style.backgroundColor
+        playerGuess[3] = guess4;
+
+        return playerGuess;
 }
 
 function compareCode() {
