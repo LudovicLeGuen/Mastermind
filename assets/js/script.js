@@ -70,9 +70,12 @@ function createPlayerGuess() {
         return playerGuess;
 }
 
+/**
+ * The function reveals the secret color code randomly generated
+ */
 function revealSecret() {
         let arr = final
-        let secret1 = Array.of[document.getElementById("secret-code")]
+        let secret1 = document.getElementById("secret-code")
         let secretColor1 = arr[0]
         let secretColor2 = arr[1]
         let secretColor3 = arr[2]
@@ -83,6 +86,7 @@ function revealSecret() {
         document.getElementById("secret-color-4").style.backgroundColor = secretColor4;
 
 }
+
 
 /**
  * The function counts the number of misplaced 
@@ -105,13 +109,38 @@ function whitePeg(playerGuess) {
 }
 
 /**
+ * each turn the function create a new row 
+ * with the guess results
+ */
+function createRow(redPeg, white) {
+        let newPeg = "<div id='row'><span class='pegs'>";
+        let gameSpace = document.getElementById('row');
+        
+        for (let i = 0; i < redPeg; i++) {
+                newPeg += "<div class='red-peg'></div>";
+        }
+        for (let i = 0; i < white; i++) {
+                newPeg += "<div class='white-peg'></div>";
+        }
+        if (redPeg + white < 4) {
+                for (let i = redPeg + white; i < 4; i++) {
+                        newPeg += "<div class = 'peg-holder'></div>";
+                }
+        }
+        newPeg += "</span></div>";
+        console.log("this is white:" + white)
+        console.log("this is red:" + redPeg)
+        console.log("here is the new peg line" + newPeg)
+        document.getElementById('decoding-board').innerHTML += newPeg;
+}
+/**
  * The function compares the user's guess array 
  * to the randomly generated array of color at
  * the start of the game.
  */
 function compareCodes() {
         var playerGuess = createPlayerGuess()
-        var redPeg = 0
+        let redPeg = 0
         for (i = 0; i < 4; i++)
                 if (playerGuess[i] == final[i]) {
                         redPeg++;
@@ -124,11 +153,13 @@ function compareCodes() {
                 youWin()
                 console.log('YOU WIN')
         } else {
-                var white = whitePeg(playerGuess) - redPeg;
+                let white = whitePeg(playerGuess) - redPeg;
                 console.log("correct: " + redPeg);
                 console.log("misplaced: " + white);
+                createRow(redPeg, white);
         }
 };
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
