@@ -11,7 +11,7 @@ function randomCode() {
                 const random = Math.floor(Math.random() * Math.floor(colors.length));
                 return colors[random];
         });
-        console.log(randomFinal);
+        console.log("this is the secret code: " + randomFinal);
         return randomFinal;
 }
 
@@ -87,7 +87,6 @@ function revealSecret() {
 
 }
 
-
 /**
  * The function counts the number of misplaced 
  * colors in the user guess
@@ -98,7 +97,6 @@ function whitePeg(playerGuess) {
                 for (j = 0; j < 4; j++) {
                         if (final[i] == playerGuess[j]) {
                                 whitePeg++;
-                                playerGuess[j] = 10;
                                 break;
                         }
                 }
@@ -112,10 +110,10 @@ function whitePeg(playerGuess) {
  * each turn the function create a new row 
  * with the guess results
  */
-function createRow(redPeg, white) {
-        let newPeg = "<div id='row'><span class='pegs'>";
+function createRow(playerGuess, redPeg, white) {
         let gameSpace = document.getElementById('row');
-        
+        let newPeg = "<div id='row'><span class='pegs'>";
+
         for (let i = 0; i < redPeg; i++) {
                 newPeg += "<div class='red-peg'></div>";
         }
@@ -124,15 +122,28 @@ function createRow(redPeg, white) {
         }
         if (redPeg + white < 4) {
                 for (let i = redPeg + white; i < 4; i++) {
-                        newPeg += "<div class = 'peg-holder'></div>";
+                        newPeg += "<div class = 'peg-print'></div>";
                 }
         }
-        newPeg += "</span></div>";
-        console.log("this is white:" + white)
-        console.log("this is red:" + redPeg)
-        console.log("here is the new peg line" + newPeg)
-        document.getElementById('decoding-board').innerHTML += newPeg;
+        newPeg += "</span>";
+
+        let arr = playerGuess
+        color1 = arr[0];
+        color2 = arr[1];
+        color3 = arr[2];
+        color4 = arr[3];
+
+        let newChoice1 = "<span class='code-breaker'><div class='color-print' style = 'background-color:" + color1 + "'></div>"
+        let newChoice2 = "<div class='color-print' style ='background-color:" + color2 + "'></div>"
+        let newChoice3 = "<div class='color-print' style ='background-color:" + color3 + "'></div>"
+        let newChoice4 = "<div class='color-print' style ='background-color:" + color4 + "'></div>"
+        
+        newPeg2 = "</span></div>";
+
+        document.getElementById('decoding-board').innerHTML += (newPeg + newChoice1 + newChoice2 + newChoice3 + newChoice4 + newPeg2);
+
 }
+
 /**
  * The function compares the user's guess array 
  * to the randomly generated array of color at
@@ -154,9 +165,8 @@ function compareCodes() {
                 console.log('YOU WIN')
         } else {
                 let white = whitePeg(playerGuess) - redPeg;
-                console.log("correct: " + redPeg);
-                console.log("misplaced: " + white);
-                createRow(redPeg, white);
+                playerGuess = createPlayerGuess()
+                createRow(playerGuess, redPeg, white);
         }
 };
 

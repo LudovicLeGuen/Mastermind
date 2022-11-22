@@ -57,7 +57,11 @@ body {
     width: 50px;
     border-radius: 50px;
 }
-
+#row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 .pegs {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -65,11 +69,20 @@ body {
     height: 35px;
     width: 35px;
     float: left;
-    margin-top: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
     border: solid 1px red;
 }
 
 .peg-holder {
+    margin: auto;
+    background-color:  #d98c71;
+    padding: 10px auto;
+    height: 5px;
+    width: 5px;
+    border-radius: 50px;
+}
+.peg-print {
     margin: auto;
     background-color: brown;
     padding: 10px auto;
@@ -105,9 +118,19 @@ body {
     border: 1px solid black;
     margin: 0 auto;
     margin-top: 10px;
+    margin-right: 10px;
 }
 
 .color-holder {
+    margin: auto;
+    border: solid 1px black;
+    padding: 10px auto;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+}
+
+.color-print {
     margin: auto;
     border: solid 1px black;
     padding: 10px auto;
