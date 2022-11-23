@@ -7,7 +7,7 @@ let final = randomCode()
 
 // Creates 4 colors randomly
 function randomCode() {
-        var randomFinal = [...new Array(4)].map(color => {
+        let randomFinal = [...new Array(4)].map(color => {
                 const random = Math.floor(Math.random() * Math.floor(colors.length));
                 return colors[random];
         });
@@ -18,37 +18,98 @@ function randomCode() {
 /**
  * User toggles colors to create a 4 colors guess.
  */
-let colorCode = document.getElementsByClassName("color-holder");
+function changeColorG1() {
+        let colorCode = document.getElementById("g1");
 
-for (var i = 0; i < colorCode.length; i++) {
-        colorCode[i].addEventListener('click', function onClick(event) { // loop through all elements with the "color-holder" Class attribute
+        const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
 
-                const backgroundColor = event.target.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
-
-                if (backgroundColor === '') {
-                        event.target.style.backgroundColor = 'blue';
-                } else if (backgroundColor === 'blue') {
-                        event.target.style.backgroundColor = 'red';
-                } else if (backgroundColor === 'red') {
-                        event.target.style.backgroundColor = 'yellow';
-                } else if (backgroundColor === 'yellow') {
-                        event.target.style.backgroundColor = 'green';
-                } else if (backgroundColor === 'green') {
-                        event.target.style.backgroundColor = 'orange';
-                } else if (backgroundColor === 'orange') {
-                        event.target.style.backgroundColor = 'purple';
-                } else {
-                        event.target.style.backgroundColor = 'blue';
-                };
-        })
+        if (backgroundColor === '') {
+                colorCode.style.backgroundColor = 'blue';
+        } else if (backgroundColor === 'blue') {
+                colorCode.style.backgroundColor = 'red';
+        } else if (backgroundColor === 'red') {
+                colorCode.style.backgroundColor = 'yellow';
+        } else if (backgroundColor === 'yellow') {
+                colorCode.style.backgroundColor = 'green';
+        } else if (backgroundColor === 'green') {
+                colorCode.style.backgroundColor = 'orange';
+        } else if (backgroundColor === 'orange') {
+                colorCode.style.backgroundColor = 'purple';
+        } else {
+                colorCode.style.backgroundColor = 'blue';
+        };
 };
+function changeColorG2() {
+        let colorCode = document.getElementById("g2");
+
+        const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
+
+        if (backgroundColor === '') {
+                colorCode.style.backgroundColor = 'blue';
+        } else if (backgroundColor === 'blue') {
+                colorCode.style.backgroundColor = 'red';
+        } else if (backgroundColor === 'red') {
+                colorCode.style.backgroundColor = 'yellow';
+        } else if (backgroundColor === 'yellow') {
+                colorCode.style.backgroundColor = 'green';
+        } else if (backgroundColor === 'green') {
+                colorCode.style.backgroundColor = 'orange';
+        } else if (backgroundColor === 'orange') {
+                colorCode.style.backgroundColor = 'purple';
+        } else {
+                colorCode.style.backgroundColor = 'blue';
+        };
+};
+function changeColorG3() {
+        let colorCode = document.getElementById("g3");
+
+        const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
+
+        if (backgroundColor === '') {
+                colorCode.style.backgroundColor = 'blue';
+        } else if (backgroundColor === 'blue') {
+                colorCode.style.backgroundColor = 'red';
+        } else if (backgroundColor === 'red') {
+                colorCode.style.backgroundColor = 'yellow';
+        } else if (backgroundColor === 'yellow') {
+                colorCode.style.backgroundColor = 'green';
+        } else if (backgroundColor === 'green') {
+                colorCode.style.backgroundColor = 'orange';
+        } else if (backgroundColor === 'orange') {
+                colorCode.style.backgroundColor = 'purple';
+        } else {
+                colorCode.style.backgroundColor = 'blue';
+        };
+};
+function changeColorG4() {
+        let colorCode = document.getElementById("g4");
+
+        const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
+
+        if (backgroundColor === '') {
+                colorCode.style.backgroundColor = 'blue';
+        } else if (backgroundColor === 'blue') {
+                colorCode.style.backgroundColor = 'red';
+        } else if (backgroundColor === 'red') {
+                colorCode.style.backgroundColor = 'yellow';
+        } else if (backgroundColor === 'yellow') {
+                colorCode.style.backgroundColor = 'green';
+        } else if (backgroundColor === 'green') {
+                colorCode.style.backgroundColor = 'orange';
+        } else if (backgroundColor === 'orange') {
+                colorCode.style.backgroundColor = 'purple';
+        } else {
+                colorCode.style.backgroundColor = 'blue';
+        };
+};
+
 
 /**
  * The function creates an array out of the colors chosen 
  * by the player to break the final color code.
  */
 function createPlayerGuess() {
-        var playerGuess = []
+        let playerGuess = []
 
         let obj1 = document.getElementById("g1");
         let guess1 = obj1.style.backgroundColor
@@ -92,7 +153,7 @@ function revealSecret() {
  * colors in the user guess
  */
 function whitePeg(playerGuess) {
-        var whitePeg = 0;
+        let whitePeg = 0;
         for (i = 0; i < 4; i++) {
                 for (j = 0; j < 4; j++) {
                         if (final[i] == playerGuess[j]) {
@@ -137,7 +198,7 @@ function createRow(playerGuess, redPeg, white) {
         let newChoice2 = "<div class='color-print' style ='background-color:" + color2 + "'></div>"
         let newChoice3 = "<div class='color-print' style ='background-color:" + color3 + "'></div>"
         let newChoice4 = "<div class='color-print' style ='background-color:" + color4 + "'></div>"
-        
+
         newPeg2 = "</span></div>";
 
         document.getElementById('decoding-board').innerHTML += (newPeg + newChoice1 + newChoice2 + newChoice3 + newChoice4 + newPeg2);
@@ -150,7 +211,7 @@ function createRow(playerGuess, redPeg, white) {
  * the start of the game.
  */
 function compareCodes() {
-        var playerGuess = createPlayerGuess()
+        let playerGuess = createPlayerGuess()
         let redPeg = 0
         for (i = 0; i < 4; i++)
                 if (playerGuess[i] == final[i]) {
@@ -171,10 +232,10 @@ function compareCodes() {
 };
 
 // Get the modal
-var modal = document.getElementById("myModal");
+let modal = document.getElementById("myModal");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 function youWin() {
