@@ -20,7 +20,6 @@ function randomCode() {
  */
 function changeColorG1() {
         let colorCode = document.getElementById("g1");
-
         const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
 
         if (backgroundColor === '') {
@@ -41,7 +40,6 @@ function changeColorG1() {
 };
 function changeColorG2() {
         let colorCode = document.getElementById("g2");
-
         const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
 
         if (backgroundColor === '') {
@@ -62,7 +60,6 @@ function changeColorG2() {
 };
 function changeColorG3() {
         let colorCode = document.getElementById("g3");
-
         const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
 
         if (backgroundColor === '') {
@@ -83,7 +80,6 @@ function changeColorG3() {
 };
 function changeColorG4() {
         let colorCode = document.getElementById("g4");
-
         const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
 
         if (backgroundColor === '') {
@@ -202,7 +198,6 @@ function createRow(playerGuess, redPeg, white) {
         newPeg2 = "</span></div>";
 
         document.getElementById('decoding-board').innerHTML += (newPeg + newChoice1 + newChoice2 + newChoice3 + newChoice4 + newPeg2);
-
 }
 
 /**
