@@ -57,11 +57,13 @@ body {
     width: 50px;
     border-radius: 50px;
 }
+
 #row {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 .pegs {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -76,12 +78,13 @@ body {
 
 .peg-holder {
     margin: auto;
-    background-color:  #d98c71;
+    background-color: #d98c71;
     padding: 10px auto;
     height: 5px;
     width: 5px;
     border-radius: 50px;
 }
+
 .peg-print {
     margin: auto;
     background-color: brown;
@@ -244,20 +247,50 @@ body {
 }
 
 /* Modal Content */
-.modal-content {
+#modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
     width: 80%;
+    border-radius: 5px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+.play-container {
+    display: flex;
+    justify-content: center;
+}
+
+.play-again {
+    background-color: bisque;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    padding: 5px;
+    font-size: 150%;
+    font-weight: bold;
 }
 
 /* The Close Button */
 .close {
-    color: #aaaaaa;
+    background-color: #888;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .close:hover,

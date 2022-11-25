@@ -18,7 +18,7 @@
             </section>
             <section id="title-container">
                 <div class="title">
-                    <h2>Start</h2><!-- Start and reset -->
+                    <h2 onClick = 'location.reload();' style="cursor: pointer;">Start</h2><!-- Start and reset -->
                 </div>
                 <div class="title">
                     <h2>Rules</h2><!-- Rules button will open a Modal-->
@@ -62,14 +62,13 @@
             </section>
             <section id="submit" onClick="compareCodes();"><i class="fa-solid fa-check"></i></section>
             <!-- the submit button will appear only when the four Code breaker colors will be inserted-->
-
         </div>
-        <div id="myModal" class="modal">
+        
+        <div id="popupModal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h1>You win! Congrats</h1>
+            <div id="modal-content">
+                
             </div>
 
         </div>

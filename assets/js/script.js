@@ -38,6 +38,7 @@ function changeColorG1() {
                 colorCode.style.backgroundColor = 'blue';
         };
 };
+
 function changeColorG2() {
         let colorCode = document.getElementById("g2");
         const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
@@ -58,6 +59,7 @@ function changeColorG2() {
                 colorCode.style.backgroundColor = 'blue';
         };
 };
+
 function changeColorG3() {
         let colorCode = document.getElementById("g3");
         const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
@@ -78,6 +80,7 @@ function changeColorG3() {
                 colorCode.style.backgroundColor = 'blue';
         };
 };
+
 function changeColorG4() {
         let colorCode = document.getElementById("g4");
         const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
@@ -226,25 +229,11 @@ function compareCodes() {
         }
 };
 
-// Get the modal
-let modal = document.getElementById("myModal");
-
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
 function youWin() {
+        var modal = document.getElementById("popupModal"); 
+        var text = `<div class="close">&times;</div>
+        <div class="image"><img src="assets/images/you-win.png" alt="The win banner"></div>
+        <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Play again</button></div>`
+        document.getElementById("modal-content").innerHTML += text;
         modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-        modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-        if (event.target == modal) {
-                modal.style.display = "none";
-        }
 }
