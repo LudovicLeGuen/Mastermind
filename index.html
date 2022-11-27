@@ -18,10 +18,10 @@
             </section>
             <section id="title-container">
                 <div class="title">
-                    <h2 onClick = 'location.reload();' style="cursor: pointer;">Start</h2><!-- Start and reset -->
+                    <h2 onClick='location.reload();' style="cursor: pointer;">Start</h2><!-- Start and reset -->
                 </div>
                 <div class="title">
-                    <h2>Rules</h2><!-- Rules button will open a Modal-->
+                    <h2 onClick='rules();' style="cursor: pointer;">Rules</h2><!-- Rules button will open a Modal-->
                 </div>
             </section>
             <section id="secret-code">
@@ -60,15 +60,15 @@
                 <div class="color orange"></div>
                 <div class="color purple"></div>
             </section>
-            <section id="submit" onClick="compareCodes();"><i class="fa-solid fa-check"></i></section>
+            <button id="submit" onClick="compareCodes();"><i class="fa-solid fa-check"></i></button>
             <!-- the submit button will appear only when the four Code breaker colors will be inserted-->
         </div>
-        
+
         <div id="popupModal" class="modal">
 
             <!-- Modal content -->
             <div id="modal-content">
-                
+                <div id="close">&times;</div>
             </div>
 
         </div>

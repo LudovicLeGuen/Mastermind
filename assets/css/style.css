@@ -253,6 +253,9 @@ body {
     padding: 20px;
     width: 80%;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 30px rgb(0 0 0 / 80%);
 }
 
 .image {
@@ -260,9 +263,15 @@ body {
     justify-content: center;
 }
 
+.image img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
 .play-container {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .play-again {
@@ -279,7 +288,9 @@ body {
 }
 
 /* The Close Button */
-.close {
+#close {
+
+    margin-left: 95%;
     background-color: #888;
     color: white;
     float: right;
@@ -293,8 +304,8 @@ body {
     align-items: center;
 }
 
-.close:hover,
-.close:focus {
+#close:hover,
+#close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;

@@ -1,11 +1,10 @@
+const colors = ["blue", "red", "yellow", "green", "orange", "purple"];
+let trial = 0
+let final = randomCode()
 /**
  * The secret code of 4 colors is randomly created
  * and the users will have to guess it.
  */
-const colors = ["blue", "red", "yellow", "green", "orange", "purple"];
-let final = randomCode()
-
-// Creates 4 colors randomly
 function randomCode() {
         let randomFinal = [...new Array(4)].map(color => {
                 const random = Math.floor(Math.random() * Math.floor(colors.length));
@@ -218,22 +217,61 @@ function compareCodes() {
                         //TBD
                 }
         if (redPeg == 4) {
+                trial++
                 revealSecret()
                 document.getElementById("submit").disabled = true;
-                youWin()
+                winLoose(redPeg, )
                 console.log('YOU WIN')
         } else {
                 let white = whitePeg(playerGuess) - redPeg;
                 playerGuess = createPlayerGuess()
                 createRow(playerGuess, redPeg, white);
+                trial++
+                winLoose(redPeg, )
+                console.log("this is the number of guess" + trial)
         }
 };
 
-function youWin() {
-        var modal = document.getElementById("popupModal"); 
-        var text = `<div class="close">&times;</div>
-        <div class="image"><img src="assets/images/you-win.png" alt="The win banner"></div>
+let modal = document.getElementById("popupModal");
+
+
+/**This modal will open if you lose or win*/
+function winLoose(redPeg) {
+
+        if (redPeg == 4) {
+                let textWin = `<div class="image"><img src="assets/images/you-win.png" alt="The winner banner"></div>
         <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Play again</button></div>`
-        document.getElementById("modal-content").innerHTML += text;
+                document.getElementById("modal-content").innerHTML += textWin;
+                modal.style.display = "block";
+               
+        } else if (trial == 10) {
+                let textLose = `<div class="image"><img src="assets/images/you-lose.png" alt="The looser banner"></div>
+        <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Try again</button></div>`
+                document.getElementById("modal-content").innerHTML += textLose;
+                modal.style.display = "block";
+                document.getElementById("submit").disabled = true;
+        } else {}
+}
+
+/**This modal will open if you click the rules button*/
+function rules() {
+        let textRules = `<div><h1>Rules</h1></div><div><h3>The goal is to arrange different colored pegs in the correct order in a row.<br>The resulting pattern must match the hidden code. The player has up to 12 turns to crack the code.</h3></div>
+        <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Try again</button></div>`
+        document.getElementById("modal-content").innerHTML += textRules;
         modal.style.display = "block";
+}
+
+// User clicks anywhere outside the modal to close it.
+window.onclick = function (event) {
+        if (event.target == modal) {
+                modal.style.display = "none";
+        }
+}
+
+// user clicks on (x) to close the modal. 
+let btnClose = document.getElementById("close");
+ 
+btnClose.addEventListener("click", closeModal);
+function closeModal() {
+        modal.style.display = "none";
 }
