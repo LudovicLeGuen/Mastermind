@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Inknut+Antiqua:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Cormorant, sans-serif;
 }
 
 #container {
@@ -17,15 +19,17 @@ body {
 
 #full-board {
     height: 800px;
+    min-width: 350px;
     width: 20vw;
-    border: solid 3px black;
     border-radius: 5px;
-    background-color: #d98c71;
+    background-color: #8AAAE5;
     display: flex;
     flex-direction: column;
+    box-shadow: 10px 10px 30px rgb(0 0 0 / 80%);
 }
 
 #board-name {
+    font-size: 200%;
     margin: 5px auto;
 }
 
@@ -47,7 +51,6 @@ body {
     display: flex;
     justify-content: space-evenly;
     height: auto;
-    border: solid 2px black;
 }
 
 .secret-color {
@@ -72,13 +75,12 @@ body {
     width: 35px;
     float: left;
     margin-top: 10px;
-    margin-left: 10px;
-    border: solid 1px red;
+    margin-left: 25px;
 }
 
 .peg-holder {
     margin: auto;
-    background-color: #d98c71;
+    background-color: #8AAAE5;
     padding: 10px auto;
     height: 5px;
     width: 5px;
@@ -87,7 +89,7 @@ body {
 
 .peg-print {
     margin: auto;
-    background-color: brown;
+    background-color: black;
     padding: 10px auto;
     height: 5px;
     width: 5px;
@@ -118,7 +120,6 @@ body {
     grid-template-rows: repeat(1, 35px);
     width: 70%;
     height: 35px;
-    border: 1px solid black;
     margin: 0 auto;
     margin-top: 10px;
     margin-right: 10px;
@@ -145,11 +146,11 @@ body {
 
 .color-picker {
     display: grid;
-    grid-template-columns: repeat(3, 33.3%);
-    grid-template-rows: repeat(2, 65px);
-    background-color: #d98c71;
+    grid-template-columns: repeat(6, 16.66%);
+    grid-template-rows: repeat(1, 57px);
+    background-color: #8AAAE5;
     width: 100%;
-    height: 130px;
+    height: 55px;
     margin: 0 auto;
     margin-top: 10px;
 }
@@ -205,20 +206,14 @@ body {
 
 #submit {
     height: 50px;
-    width: 100%;
-
     background-color: green;
-    border: solid 1px black;
-
+    border-radius: 10px;
     color: white;
     font-size: 350%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin: 2px;
-
+    margin: 5px 2px;
     cursor: pointer;
 }
 
@@ -289,7 +284,7 @@ body {
 
 /* The Close Button */
 #close {
-
+    font-family: 'Courier New', Courier, monospace;
     margin-left: 95%;
     background-color: #888;
     color: white;

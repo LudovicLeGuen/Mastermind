@@ -239,15 +239,15 @@ let modal = document.getElementById("popupModal");
 function winLoose(redPeg) {
 
         if (redPeg == 4) {
-                let textWin = `<div class="image"><img src="assets/images/you-win.png" alt="The winner banner"></div>
-        <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Play again</button></div>`
-                document.getElementById("modal-content").innerHTML += textWin;
+                let textWin = `<div id="remove"><div class="image"><img src="assets/images/you-win.png" alt="The winner banner"></div>
+        <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Play again</button></div></div>`
+                document.getElementById("modal-content").insertAdjacentHTML("beforeend", textWin);
                 modal.style.display = "block";
-               
+
         } else if (trial == 10) {
-                let textLose = `<div class="image"><img src="assets/images/you-lose.png" alt="The looser banner"></div>
-        <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Try again</button></div>`
-                document.getElementById("modal-content").innerHTML += textLose;
+                let textLose = `<div id="remove"><div class="image"><img src="assets/images/you-lose.png" alt="The looser banner"></div>
+        <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Try again</button></div></div>`
+                document.getElementById("modal-content").insertAdjacentHTML("beforeend", textLose);
                 modal.style.display = "block";
                 document.getElementById("submit").disabled = true;
         } else {}
@@ -255,23 +255,31 @@ function winLoose(redPeg) {
 
 /**This modal will open if you click the rules button*/
 function rules() {
-        let textRules = `<div><h1>Rules</h1></div><div><h3>The goal is to arrange different colored pegs in the correct order in a row.<br>The resulting pattern must match the hidden code. The player has up to 12 turns to crack the code.</h3></div>
-        <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Try again</button></div>`
-        document.getElementById("modal-content").innerHTML += textRules;
+        let textRules = `<div id="remove"><div><h1>Rules</h1></div><div><h3>The goal is to arrange different colored pegs in the correct order in a row.<br>The resulting pattern must match the hidden code. The player has up to 12 turns to crack the code.</h3></div>
+        <div class="play-container"><button class="play-again" onClick = 'closeModal();'>Continue</button></div></div>`
+        document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
         modal.style.display = "block";
 }
 
 // User clicks anywhere outside the modal to close it.
 window.onclick = function (event) {
         if (event.target == modal) {
+                
+                // this piece of script allows the content to not be duplicated each time the modal is closed and opened
+                let el = document.getElementById("remove");
+                el.remove();
+                // this line closes the modal
                 modal.style.display = "none";
         }
 }
 
 // user clicks on (x) to close the modal. 
 let btnClose = document.getElementById("close");
- 
 btnClose.addEventListener("click", closeModal);
+
 function closeModal() {
+        let el = document.getElementById("remove");
+        el.remove();
+
         modal.style.display = "none";
 }
