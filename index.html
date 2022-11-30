@@ -21,7 +21,7 @@
                     <h2 onClick='location.reload();' style="cursor: pointer;">Start</h2><!-- Start and reset -->
                 </div>
                 <div class="title">
-                    <h2 onClick='rules();' style="cursor: pointer;">Rules</h2><!-- Rules button will open a Modal-->
+                    <h2 onClick='rulesPage1();' style="cursor: pointer;">Rules</h2><!-- Rules button will open a Modal-->
                 </div>
             </section>
             <section id="secret-code">
@@ -33,6 +33,7 @@
             </section>
             <section id="decoding-board">
             </section>
+             <!--  
             <section id="row">
                 <span class="pegs">
                     <div class="peg-holder"></div>
@@ -46,9 +47,175 @@
                     <div class="color-holder" onClick="changeColorG3();" id="g3"></div>
                     <div class="color-holder" onClick="changeColorG4();" id="g4"></div>
                 </span>
-            </section>
-
-
+            </section> 
+-->
+            <section id="row1">
+                <span class="pegs">
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                </span>
+                <span class="code-breaker">
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 1, 'r1g1');" id="r1g1"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 1, 'r1g2');" id="r1g2"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 1, 'r1g3');" id="r1g3"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 1, 'r1g4');" id="r1g4"></div>
+                </span>
+            </section> 
+            <section id="row2">
+                <span class="pegs">
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                </span>
+                <span class="code-breaker">
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 2, 'r2g1');" id="r2g1"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 2, 'r2g2');" id="r2g2"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 2, 'r2g3');" id="r2g3"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 2, 'r2g4');" id="r2g4"></div>
+                </span>
+            </section> 
+            <section id="row3">
+                <span class="pegs">
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                </span>
+                <span class="code-breaker">
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 3, 'r3g1');" id="r3g1"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 3, 'r3g2');" id="r3g2"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 3, 'r3g3');" id="r3g3"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 3, 'r3g4');" id="r3g4"></div>
+                </span>
+            </section> 
+            <section id="row4">
+                <span class="pegs">
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                </span>
+                <span class="code-breaker">
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 4, 'r4g1');" id="r4g1"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 4, 'r4g2');" id="r4g2"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 4, 'r4g3');" id="r4g3"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 4, 'r4g4');" id="r4g4"></div>
+                </span>
+            </section> <section id="row5">
+                <span class="pegs">
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                </span>
+                <span class="code-breaker">
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 5, 'r5g1');" id="r5g1"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 5, 'r5g2');" id="r5g2"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 5, 'r5g3');" id="r5g3"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 5, 'r5g4');" id="r5g4"></div>
+                </span>
+            </section> 
+            <section id="row6">
+                <span class="pegs">
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                </span>
+                <span class="code-breaker">
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 6, 'r6g1');" id="r6g1"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 6, 'r6g2');" id="r6g2"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 6, 'r6g3');" id="r6g3"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 6, 'r6g4');" id="r6g4"></div>
+                </span>
+            </section> 
+            <section id="row7">
+                <span class="pegs">
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                </span>
+                <span class="code-breaker">
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 1, 'r1g1');" id="r1g1"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 1, 'r1g2');" id="r1g2"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 1, 'r1g3');" id="r1g3"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 1, 'r1g4');" id="r1g4"></div>
+                </span>
+            </section> 
+            <section id="row8">
+                <span class="pegs">
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                </span>
+                <span class="code-breaker">
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 2, 'r2g1');" id="r2g1"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 2, 'r2g2');" id="r2g2"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 2, 'r2g3');" id="r2g3"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 2, 'r2g4');" id="r2g4"></div>
+                </span>
+            </section> 
+            <section id="row9">
+                <span class="pegs">
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                </span>
+                <span class="code-breaker">
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 3, 'r3g1');" id="r3g1"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 3, 'r3g2');" id="r3g2"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 3, 'r3g3');" id="r3g3"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 3, 'r3g4');" id="r3g4"></div>
+                </span>
+            </section> 
+            <section id="row10">
+                <span class="pegs">
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                </span>
+                <span class="code-breaker">
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 4, 'r4g1');" id="r4g1"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 4, 'r4g2');" id="r4g2"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 4, 'r4g3');" id="r4g3"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 4, 'r4g4');" id="r4g4"></div>
+                </span>
+            </section> 
+            <section id="row11">
+                <span class="pegs">
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                </span>
+                <span class="code-breaker">
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 5, 'r5g1');" id="r5g1"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 5, 'r5g2');" id="r5g2"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 5, 'r5g3');" id="r5g3"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 5, 'r5g4');" id="r5g4"></div>
+                </span>
+            </section> 
+            <section id="row12">
+                <span class="pegs">
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                    <div class="peg-holder"></div>
+                </span>
+                <span class="code-breaker">
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 6, 'r6g1');" id="r6g1"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 6, 'r6g2');" id="r6g2"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 6, 'r6g3');" id="r6g3"></div>
+                    <div class="color-holder" style= "background-color: grey;" onClick="changeColorKoko(event, 6, 'r6g4');" id="r6g4"></div>
+                </span>
+            </section> 
 
             <!-- This user will pick the colors for his code here. This board will appear only when a game starts-->
             <section class="color-picker">

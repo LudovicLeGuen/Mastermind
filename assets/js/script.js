@@ -1,6 +1,7 @@
 const colors = ["blue", "red", "yellow", "green", "orange", "purple"];
 let trial = 0
 let final = randomCode()
+let currentRow = 1
 /**
  * The secret code of 4 colors is randomly created
  * and the users will have to guess it.
@@ -101,6 +102,29 @@ function changeColorG4() {
         };
 };
 
+function changeColorKoko(event, rowId, rowIdAsString) {
+        if (currentRow === parseInt(rowId)) {
+                console.log("i walk now", rowId, rowIdAsString)
+                let colorCode = document.getElementById(rowIdAsString);
+                const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
+        
+                if (backgroundColor === '') {
+                        colorCode.style.backgroundColor = 'blue';
+                } else if (backgroundColor === 'blue') {
+                        colorCode.style.backgroundColor = 'red';
+                } else if (backgroundColor === 'red') {
+                        colorCode.style.backgroundColor = 'yellow';
+                } else if (backgroundColor === 'yellow') {
+                        colorCode.style.backgroundColor = 'green';
+                } else if (backgroundColor === 'green') {
+                        colorCode.style.backgroundColor = 'orange';
+                } else if (backgroundColor === 'orange') {
+                        colorCode.style.backgroundColor = 'purple';
+                } else {
+                        colorCode.style.backgroundColor = 'blue';
+                };
+        }
+};
 
 /**
  * The function creates an array out of the colors chosen 
@@ -109,19 +133,19 @@ function changeColorG4() {
 function createPlayerGuess() {
         let playerGuess = []
 
-        let obj1 = document.getElementById("g1");
+        let obj1 = document.getElementById(`r${currentRow}g1`);
         let guess1 = obj1.style.backgroundColor
         playerGuess[0] = guess1;
 
-        let obj2 = document.getElementById("g2");
+        let obj2 = document.getElementById(`r${currentRow}g2`);
         let guess2 = obj2.style.backgroundColor
         playerGuess[1] = guess2;
 
-        let obj3 = document.getElementById("g3");
+        let obj3 = document.getElementById(`r${currentRow}g3`);
         let guess3 = obj3.style.backgroundColor
         playerGuess[2] = guess3;
 
-        let obj4 = document.getElementById("g4");
+        let obj4 = document.getElementById(`r${currentRow}g4`);
         let guess4 = obj4.style.backgroundColor
         playerGuess[3] = guess4;
 
@@ -230,6 +254,7 @@ function compareCodes() {
                 winLoose(redPeg, )
                 console.log("this is the number of guess" + trial)
         }
+        currentRow += 1
 };
 
 let modal = document.getElementById("popupModal");
@@ -245,6 +270,7 @@ function winLoose(redPeg) {
                 modal.style.display = "block";
 
         } else if (trial == 10) {
+                revealSecret()
                 let textLose = `<div id="remove"><div class="image"><img src="assets/images/you-lose.png" alt="The looser banner"></div>
         <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Try again</button></div></div>`
                 document.getElementById("modal-content").insertAdjacentHTML("beforeend", textLose);
@@ -254,9 +280,119 @@ function winLoose(redPeg) {
 }
 
 /**This modal will open if you click the rules button*/
-function rules() {
-        let textRules = `<div id="remove"><div><h1>Rules</h1></div><div><h3>The goal is to arrange different colored pegs in the correct order in a row.<br>The resulting pattern must match the hidden code. The player has up to 12 turns to crack the code.</h3></div>
-        <div class="play-container"><button class="play-again" onClick = 'closeModal();'>Continue</button></div></div>`
+function rulesPage1() {
+        let textRules = `<div id="remove">
+        <div class="title-box">
+            <h1>Rules 1/4</h1>
+        </div>
+        <div class="rule-box">
+        <span class="left" style="color: white;"><i class="fa-solid fa-chevron-left"></i></span>  
+                <div class = "description"><img src="assets/images/spots.png" alt="The winner banner">       
+                <h3>The goal is to break the four colors secret code at the top (black arrow).<br>
+                To do so you will need to insert four colors in the users box (white arrow) and push the green Submit button.<br>
+                </h3>
+                </div>           
+            <span class="right" onClick='rulesPage2();' style="cursor: pointer;"><i class="fa-solid fa-chevron-right"></i>
+        </span>
+        </div>
+        <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
+    </div>`
+        document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
+        modal.style.display = "block";
+}
+
+function rulesPage1b() {
+        let el = document.getElementById("remove");
+        el.remove();
+
+        let textRules = `<div id="remove">
+        <div class="title-box">
+            <h1>Rules 1/4</h1>
+        </div>
+        <div class="rule-box">
+        <span class="left"><i class="fa-solid fa-chevron-left"></i></span>  
+                <div class = "description"><img src="assets/images/spots.png" alt="The winner banner">       
+                <h3>The goal is to break the four colors secret code at the top (black arrow).<br>
+                To do so you will need to insert four colors in the users box (white arrow) and push the green Submit button.<br>
+                </h3>
+                </div>           
+            <span class="right" onClick='rulesPage2();' style="cursor: pointer;"><i class="fa-solid fa-chevron-right"></i>
+        </span>
+        </div>
+        <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
+    </div>`
+        document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
+        modal.style.display = "block";
+}
+
+function rulesPage2() {
+        let el = document.getElementById("remove");
+        el.remove();
+
+        let textRules = `<div id="remove">
+        <div class="title-box">
+            <h1>Rules 2/4</h1>
+        </div>
+        <div class="rule-box">
+        <span class="left" onClick='rulesPage1b();' style="cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></span>  
+                <div class = "description"><img src="assets/images/red-peg.png" alt="The winner banner">       
+                <h3>When a color choice is correctly placed, the game will show you a red peg on the left side.<br> 
+                As you can see above, the Orange color is correctly placed in the user's guess and the game gives a red peg
+                </h3>
+                </div>           
+            <span class="right" onClick='rulesPage3();' style="cursor: pointer;"><i class="fa-solid fa-chevron-right"></i>
+        </span>
+        </div>
+        <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
+    </div>`
+        document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
+        modal.style.display = "block";
+}
+
+function rulesPage3() {
+        let el = document.getElementById("remove");
+        el.remove();
+
+        let textRules = `<div id="remove">
+        <div class="title-box">
+            <h1>Rules 3/4</h1>
+        </div>
+        <div class="rule-box">
+        <span class="left" onClick='rulesPage2();' style="cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></span>  
+                <div class = "description"><img src="assets/images/white-peg.png" alt="The winner banner">       
+                <h3>When a color choice exists in the secret code but is misplaced in the user's guess, the game will show you a white peg on the left side.<br> 
+                As you can see above, the Blue color is misplaced in the user's guess and the game gives a white peg.
+                </h3>
+                </div>           
+            <span class="right" onClick='rulesPage4();' style="cursor: pointer;"><i class="fa-solid fa-chevron-right"></i>
+        </span>
+        </div>
+        <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
+    </div>`
+        document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
+        modal.style.display = "block";
+}
+
+function rulesPage4() {
+        let el = document.getElementById("remove");
+        el.remove();
+
+        let textRules = `<div id="remove">
+        <div class="title-box">
+            <h1>Rules 4/4</h1>
+        </div>
+        <div class="rule-box">
+        <span class="left" onClick='rulesPage3();' style="cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></span>  
+                <div class = "description"><img src="assets/images/good-luck.png" alt="The winner banner">       
+                <h3>You have up 12 turns to break the secret code. <br> That's it! You know the rules.<br>
+                It is up to you now. 
+                </h3>
+                </div>           
+            <span class="right" style="color: white;"><i class="fa-solid fa-chevron-right"></i>
+        </span>
+        </div>
+        <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
+    </div>`
         document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
         modal.style.display = "block";
 }
@@ -264,7 +400,7 @@ function rules() {
 // User clicks anywhere outside the modal to close it.
 window.onclick = function (event) {
         if (event.target == modal) {
-                
+
                 // this piece of script allows the content to not be duplicated each time the modal is closed and opened
                 let el = document.getElementById("remove");
                 el.remove();
