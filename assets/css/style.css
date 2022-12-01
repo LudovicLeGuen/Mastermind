@@ -66,7 +66,7 @@ body {
     border-radius: 50px;
 }
 
-#row {
+.row {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -78,20 +78,10 @@ body {
     grid-template-rows: repeat(2, 50%);
     height: 35px;
     width: 35px;
-    float: left;
     margin: auto 0 auto 25px;
 }
 
 .peg-holder {
-    margin: auto;
-    background-color: #00539CFF;
-    padding: 10px auto;
-    height: 5px;
-    width: 5px;
-    border-radius: 50px;
-}
-
-.peg-print {
     margin: auto;
     background-color: #221c42;
     padding: 10px auto;
@@ -124,7 +114,7 @@ body {
     grid-template-rows: repeat(1, 40px);
     width: 80%;
     height: 40px;
-    margin: 10PX auto;
+    margin: 5px 25px 5px 0;
 }
 
 .color-holder {
@@ -305,12 +295,13 @@ body {
     margin: auto 4% auto 0;
 }
 
-.description img{
+.description img {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-.description h3{
+
+.description h3 {
     font-size: 175%;
     margin: 10px;
     padding: 5px;

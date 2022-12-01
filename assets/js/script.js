@@ -17,97 +17,12 @@ function randomCode() {
 
 /**
  * User toggles colors to create a 4 colors guess.
- */
-function changeColorG1() {
-        let colorCode = document.getElementById("g1");
-        const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
-
-        if (backgroundColor === '') {
-                colorCode.style.backgroundColor = 'blue';
-        } else if (backgroundColor === 'blue') {
-                colorCode.style.backgroundColor = 'red';
-        } else if (backgroundColor === 'red') {
-                colorCode.style.backgroundColor = 'yellow';
-        } else if (backgroundColor === 'yellow') {
-                colorCode.style.backgroundColor = 'green';
-        } else if (backgroundColor === 'green') {
-                colorCode.style.backgroundColor = 'orange';
-        } else if (backgroundColor === 'orange') {
-                colorCode.style.backgroundColor = 'purple';
-        } else {
-                colorCode.style.backgroundColor = 'blue';
-        };
-};
-
-function changeColorG2() {
-        let colorCode = document.getElementById("g2");
-        const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
-
-        if (backgroundColor === '') {
-                colorCode.style.backgroundColor = 'blue';
-        } else if (backgroundColor === 'blue') {
-                colorCode.style.backgroundColor = 'red';
-        } else if (backgroundColor === 'red') {
-                colorCode.style.backgroundColor = 'yellow';
-        } else if (backgroundColor === 'yellow') {
-                colorCode.style.backgroundColor = 'green';
-        } else if (backgroundColor === 'green') {
-                colorCode.style.backgroundColor = 'orange';
-        } else if (backgroundColor === 'orange') {
-                colorCode.style.backgroundColor = 'purple';
-        } else {
-                colorCode.style.backgroundColor = 'blue';
-        };
-};
-
-function changeColorG3() {
-        let colorCode = document.getElementById("g3");
-        const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
-
-        if (backgroundColor === '') {
-                colorCode.style.backgroundColor = 'blue';
-        } else if (backgroundColor === 'blue') {
-                colorCode.style.backgroundColor = 'red';
-        } else if (backgroundColor === 'red') {
-                colorCode.style.backgroundColor = 'yellow';
-        } else if (backgroundColor === 'yellow') {
-                colorCode.style.backgroundColor = 'green';
-        } else if (backgroundColor === 'green') {
-                colorCode.style.backgroundColor = 'orange';
-        } else if (backgroundColor === 'orange') {
-                colorCode.style.backgroundColor = 'purple';
-        } else {
-                colorCode.style.backgroundColor = 'blue';
-        };
-};
-
-function changeColorG4() {
-        let colorCode = document.getElementById("g4");
-        const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
-
-        if (backgroundColor === '') {
-                colorCode.style.backgroundColor = 'blue';
-        } else if (backgroundColor === 'blue') {
-                colorCode.style.backgroundColor = 'red';
-        } else if (backgroundColor === 'red') {
-                colorCode.style.backgroundColor = 'yellow';
-        } else if (backgroundColor === 'yellow') {
-                colorCode.style.backgroundColor = 'green';
-        } else if (backgroundColor === 'green') {
-                colorCode.style.backgroundColor = 'orange';
-        } else if (backgroundColor === 'orange') {
-                colorCode.style.backgroundColor = 'purple';
-        } else {
-                colorCode.style.backgroundColor = 'blue';
-        };
-};
-
-function changeColorKoko(event, rowId, rowIdAsString) {
-        if (currentRow === parseInt(rowId)) {
-                console.log("i walk now", rowId, rowIdAsString)
+*/
+function changeColorKoko(event, rowId, rowIdAsString) { // this function has been made with my mentor's help Owonikoko Oluwaseun. 
+        if (currentRow === parseInt(rowId)) { //Thats is the reason why the function actually bears its nickname 
                 let colorCode = document.getElementById(rowIdAsString);
-                const backgroundColor = colorCode.style.backgroundColor; // the.target allows me to toggle colors only on the clicked button
-        
+                const backgroundColor = colorCode.style.backgroundColor;
+
                 if (backgroundColor === '') {
                         colorCode.style.backgroundColor = 'blue';
                 } else if (backgroundColor === 'blue') {
@@ -124,7 +39,9 @@ function changeColorKoko(event, rowId, rowIdAsString) {
                         colorCode.style.backgroundColor = 'blue';
                 };
         }
-};
+        console.log("this is rowId" + rowId)
+        console.log("this is rowIdAsString" + rowIdAsString)
+}; 
 
 /**
  * The function creates an array out of the colors chosen 
@@ -149,7 +66,7 @@ function createPlayerGuess() {
         let guess4 = obj4.style.backgroundColor
         playerGuess[3] = guess4;
 
-        console.log(playerGuess);
+        console.log("this is the player guess" + playerGuess);
         return playerGuess;
 }
 
@@ -184,7 +101,6 @@ function whitePeg(playerGuess) {
                         }
                 }
         }
-        console.log(whitePeg);
 
         return whitePeg;
 }
@@ -193,9 +109,10 @@ function whitePeg(playerGuess) {
  * each turn the function create a new row 
  * with the guess results
  */
-function createRow(playerGuess, redPeg, white) {
-        let gameSpace = document.getElementById('row');
-        let newPeg = "<div id='row'><span class='pegs'>";
+function createRow(redPeg, white) {
+        let target = document.getElementById(`peg${currentRow}`);
+        target.remove();
+        let newPeg = "<span class='pegs'>";
 
         for (let i = 0; i < redPeg; i++) {
                 newPeg += "<div class='red-peg'></div>";
@@ -205,25 +122,12 @@ function createRow(playerGuess, redPeg, white) {
         }
         if (redPeg + white < 4) {
                 for (let i = redPeg + white; i < 4; i++) {
-                        newPeg += "<div class = 'peg-print'></div>";
+                        newPeg += "<div class = 'peg-holder'></div>";
                 }
         }
         newPeg += "</span>";
 
-        let arr = playerGuess
-        color1 = arr[0];
-        color2 = arr[1];
-        color3 = arr[2];
-        color4 = arr[3];
-
-        let newChoice1 = "<span class='code-breaker'><div class='color-print' style = 'background-color:" + color1 + "'></div>"
-        let newChoice2 = "<div class='color-print' style ='background-color:" + color2 + "'></div>"
-        let newChoice3 = "<div class='color-print' style ='background-color:" + color3 + "'></div>"
-        let newChoice4 = "<div class='color-print' style ='background-color:" + color4 + "'></div>"
-
-        newPeg2 = "</span></div>";
-
-        document.getElementById('decoding-board').innerHTML += (newPeg + newChoice1 + newChoice2 + newChoice3 + newChoice4 + newPeg2);
+        document.getElementById(`row${currentRow}`).insertAdjacentHTML("afterbegin", newPeg);
 }
 
 /**
@@ -238,22 +142,21 @@ function compareCodes() {
                 if (playerGuess[i] == final[i]) {
                         redPeg++;
                 } else {
-                        //TBD
+
                 }
+
         if (redPeg == 4) {
                 trial++
                 revealSecret()
                 document.getElementById("submit").disabled = true;
                 winLoose(redPeg, )
-                console.log('YOU WIN')
+                
         } else {
                 let white = whitePeg(playerGuess) - redPeg;
-                playerGuess = createPlayerGuess()
-                createRow(playerGuess, redPeg, white);
+                createRow(redPeg, white);
                 trial++
-                winLoose(redPeg, )
-                console.log("this is the number of guess" + trial)
-        }
+                winLoose(redPeg)
+                       }
         currentRow += 1
 };
 
@@ -269,7 +172,7 @@ function winLoose(redPeg) {
                 document.getElementById("modal-content").insertAdjacentHTML("beforeend", textWin);
                 modal.style.display = "block";
 
-        } else if (trial == 10) {
+        } else if (trial == 12) {
                 revealSecret()
                 let textLose = `<div id="remove"><div class="image"><img src="assets/images/you-lose.png" alt="The looser banner"></div>
         <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Try again</button></div></div>`
