@@ -17,7 +17,7 @@ function randomCode() {
 
 /**
  * User toggles colors to create a 4 colors guess.
-*/
+ */
 function changeColorKoko(event, rowId, rowIdAsString) { // this function has been made with my mentor's help Owonikoko Oluwaseun. 
         if (currentRow === parseInt(rowId)) { //Thats is the reason why the function actually bears its nickname 
                 let colorCode = document.getElementById(rowIdAsString);
@@ -41,7 +41,7 @@ function changeColorKoko(event, rowId, rowIdAsString) { // this function has bee
         }
         console.log("this is rowId" + rowId)
         console.log("this is rowIdAsString" + rowIdAsString)
-}; 
+};
 
 /**
  * The function creates an array out of the colors chosen 
@@ -75,7 +75,6 @@ function createPlayerGuess() {
  */
 function revealSecret() {
         let arr = final
-        let secret1 = document.getElementById("secret-code")
         let secretColor1 = arr[0]
         let secretColor2 = arr[1]
         let secretColor3 = arr[2]
@@ -104,10 +103,21 @@ function whitePeg(playerGuess) {
 
         return whitePeg;
 }
+/**
+ * The function removes the glow class attribute 
+ * from the color holders
+ */
+function glow() {
+        let holders = document.querySelectorAll('.glow');
+
+        holders.forEach((holder) => {
+                holder.classList.remove('glow');
+        });
+}
 
 /**
- * each turn the function create a new row 
- * with the guess results
+ * each turn the function populates the pegs holders 
+ * accodring to the guess results
  */
 function createRow(redPeg, white) {
         let target = document.getElementById(`peg${currentRow}`);
@@ -150,14 +160,23 @@ function compareCodes() {
                 revealSecret()
                 document.getElementById("submit").disabled = true;
                 winLoose(redPeg, )
-                
+                glow()
+
+
         } else {
                 let white = whitePeg(playerGuess) - redPeg;
                 createRow(redPeg, white);
                 trial++
                 winLoose(redPeg)
-                       }
+                glow()
+        }
+
         currentRow += 1
+
+        let newHolders = document.getElementsByClassName(`${currentRow}`);
+        for (let newHolder of newHolders) {
+                newHolder.classList.add('glow');
+        }
 };
 
 let modal = document.getElementById("popupModal");

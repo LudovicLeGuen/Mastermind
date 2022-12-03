@@ -45,9 +45,36 @@ body {
 }
 
 .title {
-    width: 50%;
+    width: 30%;
     margin: 5px auto;
-    padding: 2px auto;
+    border: 3px outset;
+    border-radius: 10px;
+}
+
+/*hover effect taken from the website https://www.sliderrevolution.com*/
+.title:hover {
+    color: black;
+    background-image: linear-gradient(to right,
+            #E7484F,
+            #E7484F 16.65%,
+            #F68B1D 16.65%,
+            #F68B1D 33.3%,
+            #FCED00 33.3%,
+            #FCED00 49.95%,
+            #009E4F 49.95%,
+            #009E4F 66.6%,
+            #00AAC3 66.6%,
+            #00AAC3 83.25%,
+            #732982 83.25%,
+            #732982 100%,
+            #E7484F 100%);
+    animation: slidebg 5s linear infinite;
+}
+
+@keyframes slidebg {
+    to {
+        background-position: 20vw;
+    }
 }
 
 #secret-code {
@@ -119,10 +146,14 @@ body {
 
 .color-holder {
     margin: auto;
-    border: solid 0.5px white;
+    background-color: #003153;
     height: 40px;
     width: 40px;
     border-radius: 50px;
+}
+
+.glow {
+    box-shadow: 0 0 10px 9px #48abe0;
     cursor: pointer;
 }
 
@@ -189,15 +220,20 @@ body {
 
 #submit {
     height: 50px;
-    background-color: green;
+    background-color: white;
     border-radius: 10px;
-    color: white;
+    color: green;
     font-size: 350%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 5px 2px;
     cursor: pointer;
+}
+
+#submit:hover {
+    background-color: greenyellow;
+    color: black
 }
 
 /* The Modal (background) */
