@@ -7,6 +7,7 @@ let currentRow = 1
  * and the users will have to guess it.
  */
 document.getElementById("submit").disabled = true;
+
 function randomCode() {
         let randomFinal = [...new Array(4)].map(color => {
                 const random = Math.floor(Math.random() * Math.floor(colors.length));
@@ -162,7 +163,7 @@ function compareCodes() {
 
         if (redPeg == 4) {
                 trial++
-                revealSecret()                
+                revealSecret()
                 winLoose(redPeg, )
                 glow()
                 document.getElementById("submit").disabled = true;
@@ -212,13 +213,12 @@ function winLoose(redPeg) {
 function rulesPage1() {
         let textRules = `<div id="remove">
         <div class="title-box">
-            <h1>Rules 1/4</h1>
+            <h1>Rules 1/5</h1>
         </div>
         <div class="rule-box">
         <span class="left" style="color: white;"><i class="fa-solid fa-chevron-left"></i></span>  
-                <div class = "description"><img src="assets/images/spots.png" alt="The winner banner">       
-                <h3>The goal is to break the four colors secret code at the top (black arrow).<br>
-                To do so you will need to insert four colors in the users box (white arrow) and push the green Submit button.<br>
+                <div class = "description"><img src="assets/images/secret.PNG" alt="secret code location">       
+                <h3>You have up to 12 turns to break the secret color code under Refresh and Rules.<br>
                 </h3>
                 </div>           
             <span class="right" onClick='rulesPage2();' style="cursor: pointer;"><i class="fa-solid fa-chevron-right"></i>
@@ -236,13 +236,12 @@ function rulesPage1b() {
 
         let textRules = `<div id="remove">
         <div class="title-box">
-            <h1>Rules 1/4</h1>
+            <h1>Rules 1/6</h1>
         </div>
         <div class="rule-box">
-        <span class="left"><i class="fa-solid fa-chevron-left"></i></span>  
-                <div class = "description"><img src="assets/images/spots.png" alt="The winner banner">       
-                <h3>The goal is to break the four colors secret code at the top (black arrow).<br>
-                To do so you will need to insert four colors in the users box (white arrow) and push the green Submit button.<br>
+        <span class="left" style="color: white;"><i class="fa-solid fa-chevron-left"></i></span>  
+                <div class = "description"><img src="assets/images/secret.PNG" alt="secret code location">       
+                <h3>You have up to 12 turns to break the secret color code under Refresh and Rules.<br>
                 </h3>
                 </div>           
             <span class="right" onClick='rulesPage2();' style="cursor: pointer;"><i class="fa-solid fa-chevron-right"></i>
@@ -260,13 +259,12 @@ function rulesPage2() {
 
         let textRules = `<div id="remove">
         <div class="title-box">
-            <h1>Rules 2/4</h1>
+            <h1>Rules 2/6</h1>
         </div>
         <div class="rule-box">
         <span class="left" onClick='rulesPage1b();' style="cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></span>  
-                <div class = "description"><img src="assets/images/red-peg.png" alt="The winner banner">       
-                <h3>When a color choice is correctly placed, the game will show you a red peg on the left side.<br> 
-                As you can see above, the Orange color is correctly placed in the user's guess and the game gives a red peg
+                <div class = "description"><img src="assets/images/new-row.PNG" alt="picture of a new row">       
+                <h3>Create a guess in the highlighted spots by clicking them.
                 </h3>
                 </div>           
             <span class="right" onClick='rulesPage3();' style="cursor: pointer;"><i class="fa-solid fa-chevron-right"></i>
@@ -284,13 +282,12 @@ function rulesPage3() {
 
         let textRules = `<div id="remove">
         <div class="title-box">
-            <h1>Rules 3/4</h1>
+            <h1>Rules 3/6</h1>
         </div>
         <div class="rule-box">
         <span class="left" onClick='rulesPage2();' style="cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></span>  
-                <div class = "description"><img src="assets/images/white-peg.png" alt="The winner banner">       
-                <h3>When a color choice exists in the secret code but is misplaced in the user's guess, the game will show you a white peg on the left side.<br> 
-                As you can see above, the Blue color is misplaced in the user's guess and the game gives a white peg.
+                <div class = "description"><img src="assets/images/submit.PNG" alt="The submit button">       
+                <h3>The submit button will be available as soon as 4 colors are selected.
                 </h3>
                 </div>           
             <span class="right" onClick='rulesPage4();' style="cursor: pointer;"><i class="fa-solid fa-chevron-right"></i>
@@ -308,14 +305,58 @@ function rulesPage4() {
 
         let textRules = `<div id="remove">
         <div class="title-box">
-            <h1>Rules 4/4</h1>
+            <h1>Rules 4/6</h1>
         </div>
         <div class="rule-box">
         <span class="left" onClick='rulesPage3();' style="cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></span>  
-                <div class = "description"><img src="assets/images/good-luck.png" alt="The winner banner">       
-                <h3>You have up 12 turns to break the secret code. <br> That's it! You know the rules.<br>
-                It is up to you now. 
+                <div class = "description"><img src="assets/images/pegs.PNG" alt="Color pegs pictures">       
+                <h3>The game will feedback a red peg for a correctly placed color (the red color above).
                 </h3>
+                </div>           
+                <span class="right" onClick='rulesPage5();' style="cursor: pointer;"><i class="fa-solid fa-chevron-right"></i>
+        </span>
+        </div>
+        <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
+    </div>`
+        document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
+        modal.style.display = "block";
+}
+
+function rulesPage5() {
+        let el = document.getElementById("remove");
+        el.remove();
+
+        let textRules = `<div id="remove">
+        <div class="title-box">
+            <h1>Rules 5/6</h1>
+        </div>
+        <div class="rule-box">
+        <span class="left" onClick='rulesPage4();' style="cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></span>  
+                <div class = "description"><img src="assets/images/pegs.PNG" alt="Color pegs pictures">       
+                <h3>The game will feedback a white peg for a misplaced color (the green color above).
+                </h3>
+                </div>           
+                <span class="right" onClick='rulesPage6();' style="cursor: pointer;"><i class="fa-solid fa-chevron-right"></i>
+        </span>
+        </div>
+        <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
+    </div>`
+        document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
+        modal.style.display = "block";
+}
+
+function rulesPage6() {
+        let el = document.getElementById("remove");
+        el.remove();
+
+        let textRules = `<div id="remove">
+        <div class="title-box">
+            <h1>Rules 6/6</h1>
+        </div>
+        <div class="rule-box">
+        <span class="left" onClick='rulesPage5();' style="cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></span>  
+                <div class = "description"><img src="assets/images/goodluck.png" alt="Color pegs pictures">       
+                
                 </div>           
             <span class="right" style="color: white;"><i class="fa-solid fa-chevron-right"></i>
         </span>

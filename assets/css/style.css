@@ -33,7 +33,7 @@ body {
 
 #board-name {
     font-size: 200%;
-    margin: 5px auto;
+    margin: 5px auto 0;
 }
 
 #title-container {
@@ -167,10 +167,10 @@ body {
 .color-picker {
     display: grid;
     grid-template-columns: repeat(6, 16.66%);
-    grid-template-rows: repeat(1, 57px);
+    grid-template-rows: repeat(1, 5px);
     background-color: #00539CFF;
     width: 100%;
-    height: 55px;
+    height: 5px;
     margin: 0 auto;
     margin-top: 10px;
 }
@@ -350,14 +350,20 @@ body {
     font-size: 250%;
     margin: auto 4% auto 0;
 }
+.description{
+    width: 80%;
+    height: auto;
+}
 
 .description img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    display: block; 
 }
 
 .description h3 {
+    text-align: center;
     font-size: 175%;
     margin: 10px;
     padding: 5px;
