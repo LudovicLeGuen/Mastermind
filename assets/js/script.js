@@ -6,6 +6,7 @@ let currentRow = 1
  * The secret code of 4 colors is randomly created
  * and the users will have to guess it.
  */
+document.getElementById("submit").disabled = true;
 function randomCode() {
         let randomFinal = [...new Array(4)].map(color => {
                 const random = Math.floor(Math.random() * Math.floor(colors.length));
@@ -19,7 +20,7 @@ function randomCode() {
  * User toggles colors to create a 4 colors guess.
  */
 function changeColorKoko(event, rowId, rowIdAsString) { // this function has been made with my mentor's help Owonikoko Oluwaseun. 
-        if (currentRow === parseInt(rowId)) { //Thats is the reason why the function actually bears its nickname 
+        if (currentRow === parseInt(rowId)) { //Thats is the reason why the function actually bears her nickname :)
                 let colorCode = document.getElementById(rowIdAsString);
                 const backgroundColor = colorCode.style.backgroundColor;
 
@@ -39,9 +40,13 @@ function changeColorKoko(event, rowId, rowIdAsString) { // this function has bee
                         colorCode.style.backgroundColor = 'blue';
                 };
         }
-        console.log("this is rowId" + rowId)
-        console.log("this is rowIdAsString" + rowIdAsString)
-};
+        let playerGuess = createPlayerGuess()
+
+        if (playerGuess[0] && playerGuess[1] && playerGuess[2] && playerGuess[3] !== '') {
+                document.getElementById("submit").classList.add('submit-glow');
+                document.getElementById("submit").disabled = false;
+        }
+}
 
 /**
  * The function creates an array out of the colors chosen 
@@ -157,10 +162,11 @@ function compareCodes() {
 
         if (redPeg == 4) {
                 trial++
-                revealSecret()
-                document.getElementById("submit").disabled = true;
+                revealSecret()                
                 winLoose(redPeg, )
                 glow()
+                document.getElementById("submit").disabled = true;
+                document.getElementById("submit").classList.remove('submit-glow')
 
 
         } else {
@@ -169,6 +175,8 @@ function compareCodes() {
                 trial++
                 winLoose(redPeg)
                 glow()
+                document.getElementById("submit").disabled = true;
+                document.getElementById("submit").classList.remove('submit-glow')
         }
 
         currentRow += 1
@@ -177,11 +185,10 @@ function compareCodes() {
         for (let newHolder of newHolders) {
                 newHolder.classList.add('glow');
         }
+        document.getElementById("submit").classList.remove('glow');
 };
 
 let modal = document.getElementById("popupModal");
-
-
 /**This modal will open if you lose or win*/
 function winLoose(redPeg) {
 
