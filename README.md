@@ -81,7 +81,6 @@ All Users must be able to:
     * Restart a game at will
     * Know when they win and loose
     * Play each game with a random code to break 
-
    
 #### Scope
 
@@ -153,10 +152,38 @@ With the structure now in place the designer has created wireframes on [Balsamiq
 
 ### Design
 #### Colour Scheme
+The colors were chosen by the developper without using any generator.
 
+There are 3 different color plettes.
+<details>
+<summary>Board and Background</summary>
+
+![Board and background](assets/images/MasterBoard.png)
+
+</details>
+The background uses #EEA47F .The board uses #00539C. The secret code uses #221c42 when it hides the colors to find. The rows uses #003153. Finally the glow and the submit button use #48abe0.
+
+<details>
+<summary>Colors to play with and pegs</summary>
+
+![Pegs and colors](assets/images/PegsColors.png)
+
+</details>
+The palette is entirely used by the user to choose the colors and break the code (except the white color). The feeback pegs use exclusively the red and white color.
+
+<details>
+<summary>Submit button and Modals</summary>
+
+![Submit and modal](assets/images/miscellaneous.png)
+
+</details>
+The submit button uses the green and green yellow colors. The modal uses #fefefe and bisque colors.
 
 #### Typography
 
+The developper has chosen 'Cormorant' from [Google Fonts](https://fonts.google.com/) and 'Courier New'.
+
+Cormorant was used on the entire website while CourierNew was used exclusively on the close button of the modal (letter x).
 
 [Back to top ⇧](#Abyss-diving-club)
 
