@@ -260,10 +260,23 @@ In order to be clear and simple to use, the button is not clickable as long as t
 ![color line](assets/readme-files/line.png)
 
 ### Existing Features
-
+- **The board** - Main element of the unique page of the website.
+- **Footer** - Found at the bottom of the page.
+- **Refresh button** - at the top of the board. Allows users to reset a game
+- **Rules button** - at the top of the board. Is available at all times and will not break a game when closed.
+- **Secret Code** - Is randomized at the start of each game.
+- **Board Rows** - The playing row is highlighted to help users know where to play. Only one row is clickable at a time.
+- **Feedback pegs** - The feedback pegs are ssential to crak the secret code. A red pegs means a correctly placed color. A white peg means a misplaced color.
+- **Submit button** - Is a vital feature to register people and communicate with the team.
+- **Modals** - Actually a single modal is dynamically filled with content. This feature allows a single page approache and still show a lot of content.
+- **Play/Try again buttons** - Appear with the win and lose modal respectively. They reload the page and start a new game. 
+- **Color line** - Is both decorative and informative as its show the actual flow of colors when the user toggle colors. 
 
 ### Features to Implement in the future
-
+* Human vs human
+A human vs human mode could be fun. A user would create a secret code and the second player would have to find it.
+* A score count
+The score count could be added to motivate the user in beating either the CPU or a human.
 
 [Back to top ⇧](#mastermind-game)
 
