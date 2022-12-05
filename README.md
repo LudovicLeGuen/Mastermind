@@ -1,6 +1,6 @@
 # mastermind-game
-
-[Click here to access live project](#)
+![Mastermind on devices](assets/readme-files/amiresponsiveMaster.PNG)
+[Click here to access live project](https://ludovicleguen.github.io/Mastermind/)
 ## Table of contents
 1. [Introduction](#Introduction)
 2. [UX](#UX)
