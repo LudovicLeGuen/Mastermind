@@ -2,19 +2,54 @@ const colors = ["blue", "red", "yellow", "green", "orange", "purple"];
 let trial = 0
 let final = randomCode()
 let currentRow = 1
+
+document.getElementById("submit").disabled = true; 
 /**
  * The secret code of 4 colors is randomly created
  * and the users will have to guess it.
  */
-document.getElementById("submit").disabled = true;
-
 function randomCode() {
-        let randomFinal = [...new Array(4)].map(color => {
-                const random = Math.floor(Math.random() * Math.floor(colors.length));
-                return colors[random];
-        });
-        console.log("this is the secret code: " + randomFinal);
-        return randomFinal;
+        let randomFinal = []
+
+        let randomColor1 = colors[Math.floor(Math.random() * colors.length)];
+        for (let i = 0; i < colors.length; i++) {
+
+                if (colors[i] ===randomColor1) {
+                        colors.splice(i, 1);
+                }
+        }
+
+        let randomColor2 = colors[Math.floor(Math.random() * colors.length)];
+        for (let i = 0; i < colors.length; i++) {
+
+                if (colors[i] === randomColor2) {
+                        colors.splice(i, 1);
+                }
+        }
+
+        let randomColor3 = colors[Math.floor(Math.random() * colors.length)];
+        for (let i = 0; i < colors.length; i++) {
+
+                if (colors[i] === randomColor3) {
+                        colors.splice(i, 1);
+                }
+        }
+
+        let randomColor4 = colors[Math.floor(Math.random() * colors.length)];
+        for (let i = 0; i < colors.length; i++) {
+
+                if (colors[i] === randomColor4) {
+                        colors.splice(i, 1);
+                }
+        }
+        randomFinal.push(randomColor1)
+        randomFinal.push(randomColor2)
+        randomFinal.push(randomColor3)
+        randomFinal.push(randomColor4)
+
+        console.log("this is the code to break" + randomFinal)
+
+        return randomFinal
 }
 
 /**
@@ -72,7 +107,6 @@ function createPlayerGuess() {
         let guess4 = obj4.style.backgroundColor
         playerGuess[3] = guess4;
 
-        console.log("this is the player guess" + playerGuess);
         return playerGuess;
 }
 
@@ -213,7 +247,7 @@ function winLoose(redPeg) {
 function rulesPage1() {
         let textRules = `<div id="remove">
         <div class="title-box">
-            <h1>Rules 1/5</h1>
+            <h1>Rules 1/6</h1>
         </div>
         <div class="rule-box">
         <span class="left" style="color: white;"><i class="fa-solid fa-chevron-left"></i></span>  
