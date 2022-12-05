@@ -154,11 +154,11 @@ With the structure now in place the designer has created wireframes on [Balsamiq
 #### Colour Scheme
 The colors were chosen by the developper without using any generator.
 
-There are 3 different color plettes.
+There are 3 different color palettes.
 <details>
 <summary>Board and Background</summary>
 
-![Board and background](assets/images/MasterBoard.png)
+![Board and background](assets/images/masterboard.png)
 
 </details>
 The background uses #EEA47F .The board uses #00539C. The secret code uses #221c42 when it hides the colors to find. The rows uses #003153. Finally the glow and the submit button use #48abe0.
@@ -166,7 +166,7 @@ The background uses #EEA47F .The board uses #00539C. The secret code uses #221c4
 <details>
 <summary>Colors to play with and pegs</summary>
 
-![Pegs and colors](assets/images/PegsColors.png)
+![Pegs and colors](assets/images/pegscolors.png)
 
 </details>
 The palette is entirely used by the user to choose the colors and break the code (except the white color). The feeback pegs use exclusively the red and white color.
@@ -189,6 +189,75 @@ Cormorant was used on the entire website while CourierNew was used exclusively o
 
 ## Features
 ### Design Features
+The website consists of a single page with all features visible at one (except modals).
+
+- **The Board** - The board is a responsive feature that is essentially the game.  
+    All actions and users interfaces is on the board.
+    The board had to be simple and yet clear enough to be understood at once.
+    The board has a border shadow to give the impression it actually has a depth and hovers over the simple background.
+
+![Board](assets/readme-files/board.png)
+
+- **Footer** - The footer contains 2 centered social links, takes the full width of any screen and has a fixed height. The links simply redirect to the gihub profile of the developper and to the repository.
+
+![Footer](assets/readme-files/footer.png)
+
+- **Refresh button** - The refresh button refreshes the page and essentially resets the game.
+
+![Refresh button](assets/readme-files/refresh.png)
+
+- **Rules button** The rules button opens a modal that contains the rules. The rules are actually displayed in several modals with an intuitive interface to navigate them.
+
+![Rules button](assets/readme-files/rules.png)
+
+- **Secret code** The secret code is the goal of the game users will play to break it. The secret color is revealed when the users break the code (and therefore wins) or when the users cannot break the code in less than 12 turns. The secret code is randomly created at the beginning of each turn. The code can only contain unique colors.
+
+![Secret code hidden](assets/readme-files/secret.png) 
+![Secret code revealed](assets/readme-files/revealed.png) 
+
+- **Board rows** - The refresh button refreshes the page and essentially resets the game.There are 12 rows and the players fills each one up to crack the code. The users clicks on the holders to toggle the color and therefore create a color guess.
+In order to be clear to the user,rows are highlighted on at the time and the holder of this row are exclusively clickable. 
+
+![Board rows](assets/readme-files/rows.png)
+
+- **Feedback pegs** Each time the user submits a guess, the system feedbacks color pegs to give a clue. A red peg means a correctly placed color in the guess. A white peg means a color is not at the correct spot. 
+
+![Feedback pegs](assets/readme-files/pegs.png)
+
+- **Submit button** - The submit button "prints" the user choice and tells the system to compare the users guess with the secret code.
+In order to be clear and simple to use, the button is not clickable as long as the user has not chosen 4 different colors.
+
+![Submit button](assets/readme-files/rows.png)
+
+- **The Modals** are a very important feature of the game. There is actually only one modal that is constantly filled with content at opening and emptied when closed. Here is the different content:
+        
+    * The win Modal
+    ![Board rows](assets/readme-files/win.png)
+    * The lose modal
+    ![Board rows](assets/readme-files/lose.png)
+    * The rules 
+    ![Board rows](assets/readme-files/rules1.png)
+    ![Board rows](assets/readme-files/rules2.png)
+    ![Board rows](assets/readme-files/rules3.png)
+    ![Board rows](assets/readme-files/rules4.png)
+    ![Board rows](assets/readme-files/rules5.png)
+    ![Board rows](assets/readme-files/rules6.png)
+
+- **Continue button** - The continue button is used on each rules modal (6 of them). It allows the users to keep playing the actual game. 
+
+![Continue button](assets/readme-files/continue.png)
+
+- **Play Again button** - The play again button appears on the win modal and refreshes the page to play another game. 
+
+![Play again button](assets/readme-files/play.png)
+
+- **Try Again button** - The try again button appears on the lose modal and refreshes the page to play another game. 
+
+![Try again button](assets/readme-files/play.png)
+
+- **Color line** - The color line is actually not just a decoration. It actually shows the flow of colors when the users clicks the holders in the rows. 
+
+![color line](assets/readme-files/line.png)
 
 ### Existing Features
 

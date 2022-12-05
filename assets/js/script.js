@@ -251,7 +251,7 @@ function rulesPage1() {
         </div>
         <div class="rule-box">
         <span class="left" style="color: white;"><i class="fa-solid fa-chevron-left"></i></span>  
-                <div class = "description"><img src="assets/images/secret.PNG" alt="secret code location">       
+                <div class = "description"><img src="assets/images/secret.png" alt="secret code location">       
                 <h3>You have up to 12 turns to break the secret color code under Refresh and Rules.<br>
                 </h3>
                 </div>           
@@ -274,7 +274,7 @@ function rulesPage1b() {
         </div>
         <div class="rule-box">
         <span class="left" style="color: white;"><i class="fa-solid fa-chevron-left"></i></span>  
-                <div class = "description"><img src="assets/images/secret.PNG" alt="secret code location">       
+                <div class = "description"><img src="assets/images/secret.png" alt="secret code location">       
                 <h3>You have up to 12 turns to break the secret color code under Refresh and Rules.<br>
                 </h3>
                 </div>           
@@ -297,7 +297,7 @@ function rulesPage2() {
         </div>
         <div class="rule-box">
         <span class="left" onClick='rulesPage1b();' style="cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></span>  
-                <div class = "description"><img src="assets/images/new-row.PNG" alt="picture of a new row">       
+                <div class = "description"><img src="assets/images/new-row.png" alt="picture of a new row">       
                 <h3>Create a guess in the highlighted spots by clicking them.
                 </h3>
                 </div>           
@@ -320,7 +320,7 @@ function rulesPage3() {
         </div>
         <div class="rule-box">
         <span class="left" onClick='rulesPage2();' style="cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></span>  
-                <div class = "description"><img src="assets/images/submit.PNG" alt="The submit button">       
+                <div class = "description"><img src="assets/images/submit.png" alt="The submit button">       
                 <h3>The submit button will be available as soon as 4 colors are selected.
                 </h3>
                 </div>           
@@ -343,7 +343,7 @@ function rulesPage4() {
         </div>
         <div class="rule-box">
         <span class="left" onClick='rulesPage3();' style="cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></span>  
-                <div class = "description"><img src="assets/images/pegs.PNG" alt="Color pegs pictures">       
+                <div class = "description"><img src="assets/images/pegs.png" alt="Color pegs pictures">       
                 <h3>The game will feedback a red peg for a correctly placed color (the red color above).
                 </h3>
                 </div>           
@@ -366,7 +366,7 @@ function rulesPage5() {
         </div>
         <div class="rule-box">
         <span class="left" onClick='rulesPage4();' style="cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></span>  
-                <div class = "description"><img src="assets/images/pegs.PNG" alt="Color pegs pictures">       
+                <div class = "description"><img src="assets/images/pegs.png" alt="Color pegs pictures">       
                 <h3>The game will feedback a white peg for a misplaced color (the green color above).
                 </h3>
                 </div>           
