@@ -408,7 +408,7 @@ footer {
 
 #footer-links i {
     font-size: 170%;
-    margin: 30px;
+    margin: 0 30px;
     padding: 30px;
-    color: black;
+    color: #221c42;
 }
