@@ -3,7 +3,7 @@ let trial = 0
 let final = randomCode()
 let currentRow = 1
 
-document.getElementById("submit").disabled = true; 
+document.getElementById("submit").disabled = true;
 /**
  * The secret code of 4 colors is randomly created
  * and the users will have to guess it.
@@ -14,7 +14,7 @@ function randomCode() {
         let randomColor1 = colors[Math.floor(Math.random() * colors.length)];
         for (let i = 0; i < colors.length; i++) {
 
-                if (colors[i] ===randomColor1) {
+                if (colors[i] === randomColor1) {
                         colors.splice(i, 1);
                 }
         }
@@ -156,6 +156,18 @@ function glow() {
 }
 
 /**
+ * This function disables the onClick event. 
+ * This is used when the user wins to prevent the buttons to be clicked
+ * if the user closes the win modal.
+ */
+function removeClick() {
+        let elements = document.getElementsByClassName(`${currentRow}`)
+        for (let i = 0; i < elements.length; i++) {
+                elements[i].onclick = null;
+        }
+}
+
+/**
  * each turn the function populates the pegs holders 
  * accodring to the guess results
  */
@@ -191,18 +203,16 @@ function compareCodes() {
         for (i = 0; i < 4; i++)
                 if (playerGuess[i] == final[i]) {
                         redPeg++;
-                } else {
-
                 }
 
         if (redPeg == 4) {
                 trial++
                 revealSecret()
-                winLoose(redPeg, )
+                winLoose(redPeg)
                 glow()
                 document.getElementById("submit").disabled = true;
                 document.getElementById("submit").classList.remove('submit-glow')
-
+                removeClick()
 
         } else {
                 let white = whitePeg(playerGuess) - redPeg;
@@ -212,15 +222,16 @@ function compareCodes() {
                 glow()
                 document.getElementById("submit").disabled = true;
                 document.getElementById("submit").classList.remove('submit-glow')
+
+                currentRow += 1
+
+                let newHolders = document.getElementsByClassName(`${currentRow}`);
+                for (let newHolder of newHolders) {
+                        newHolder.classList.add('glow');
+                }
+                document.getElementById("submit").classList.remove('glow');
         }
 
-        currentRow += 1
-
-        let newHolders = document.getElementsByClassName(`${currentRow}`);
-        for (let newHolder of newHolders) {
-                newHolder.classList.add('glow');
-        }
-        document.getElementById("submit").classList.remove('glow');
 };
 
 let modal = document.getElementById("popupModal");

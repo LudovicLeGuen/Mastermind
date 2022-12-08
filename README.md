@@ -253,7 +253,7 @@ In order to be clear and simple to use, the button is not clickable as long as t
 
 - **Try Again button** - The try again button appears on the lose modal and refreshes the page to play another game. 
 
-![Try again button](assets/readme-files/play.png)
+![Try again button](assets/readme-files/try.png)
 
 - **Color line** - The color line is actually not just a decoration. It actually shows the flow of colors when the users clicks the holders in the rows. 
 
