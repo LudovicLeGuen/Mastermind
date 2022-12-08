@@ -1,7 +1,7 @@
 const colors = ["blue", "red", "yellow", "green", "orange", "purple"];
-let trial = 0
-let final = randomCode()
-let currentRow = 1
+let trial = 0;
+let final = randomCode();
+let currentRow = 1;
 
 document.getElementById("submit").disabled = true;
 /**
@@ -9,7 +9,7 @@ document.getElementById("submit").disabled = true;
  * and the users will have to guess it.
  */
 function randomCode() {
-        let randomFinal = []
+        let randomFinal = [];
 
         let randomColor1 = colors[Math.floor(Math.random() * colors.length)];
         for (let i = 0; i < colors.length; i++) {
@@ -42,14 +42,14 @@ function randomCode() {
                         colors.splice(i, 1);
                 }
         }
-        randomFinal.push(randomColor1)
-        randomFinal.push(randomColor2)
-        randomFinal.push(randomColor3)
-        randomFinal.push(randomColor4)
+        randomFinal.push(randomColor1);
+        randomFinal.push(randomColor2);
+        randomFinal.push(randomColor3);
+        randomFinal.push(randomColor4);
 
-        console.log("this is the code to break" + randomFinal)
+        console.log("this is the code to break" + randomFinal);
 
-        return randomFinal
+        return randomFinal;
 }
 
 /**
@@ -74,9 +74,9 @@ function changeColorKoko(event, rowId, rowIdAsString) { // this function has bee
                         colorCode.style.backgroundColor = 'purple';
                 } else {
                         colorCode.style.backgroundColor = 'blue';
-                };
+                }
         }
-        let playerGuess = createPlayerGuess()
+        let playerGuess = createPlayerGuess();
 
         if (playerGuess[0] && playerGuess[1] && playerGuess[2] && playerGuess[3] !== '') {
                 document.getElementById("submit").classList.add('submit-glow');
@@ -89,22 +89,22 @@ function changeColorKoko(event, rowId, rowIdAsString) { // this function has bee
  * by the player to break the final color code.
  */
 function createPlayerGuess() {
-        let playerGuess = []
+        let playerGuess = [];
 
         let obj1 = document.getElementById(`r${currentRow}g1`);
-        let guess1 = obj1.style.backgroundColor
+        let guess1 = obj1.style.backgroundColor;
         playerGuess[0] = guess1;
 
         let obj2 = document.getElementById(`r${currentRow}g2`);
-        let guess2 = obj2.style.backgroundColor
+        let guess2 = obj2.style.backgroundColor;
         playerGuess[1] = guess2;
 
         let obj3 = document.getElementById(`r${currentRow}g3`);
-        let guess3 = obj3.style.backgroundColor
+        let guess3 = obj3.style.backgroundColor;
         playerGuess[2] = guess3;
 
         let obj4 = document.getElementById(`r${currentRow}g4`);
-        let guess4 = obj4.style.backgroundColor
+        let guess4 = obj4.style.backgroundColor;
         playerGuess[3] = guess4;
 
         return playerGuess;
@@ -114,11 +114,11 @@ function createPlayerGuess() {
  * The function reveals the secret color code randomly generated
  */
 function revealSecret() {
-        let arr = final
-        let secretColor1 = arr[0]
-        let secretColor2 = arr[1]
-        let secretColor3 = arr[2]
-        let secretColor4 = arr[3]
+        let arr = final;
+        let secretColor1 = arr[0];
+        let secretColor2 = arr[1];
+        let secretColor3 = arr[2];
+        let secretColor4 = arr[3];
         document.getElementById("secret-color-1").style.backgroundColor = secretColor1;
         document.getElementById("secret-color-2").style.backgroundColor = secretColor2;
         document.getElementById("secret-color-3").style.backgroundColor = secretColor3;
@@ -132,8 +132,8 @@ function revealSecret() {
  */
 function whitePeg(playerGuess) {
         let whitePeg = 0;
-        for (i = 0; i < 4; i++) {
-                for (j = 0; j < 4; j++) {
+        for (let i = 0; i < 4; i++) {
+                for (let j = 0; j < 4; j++) {
                         if (final[i] == playerGuess[j]) {
                                 whitePeg++;
                                 break;
@@ -161,7 +161,7 @@ function glow() {
  * if the user closes the win modal.
  */
 function removeClick() {
-        let elements = document.getElementsByClassName(`${currentRow}`)
+        let elements = document.getElementsByClassName(`${currentRow}`);
         for (let i = 0; i < elements.length; i++) {
                 elements[i].onclick = null;
         }
@@ -198,32 +198,32 @@ function createRow(redPeg, white) {
  * the start of the game.
  */
 function compareCodes() {
-        let playerGuess = createPlayerGuess()
-        let redPeg = 0
-        for (i = 0; i < 4; i++)
+        let playerGuess = createPlayerGuess();
+        let redPeg = 0;
+        for (let i = 0; i < 4; i++)
                 if (playerGuess[i] == final[i]) {
                         redPeg++;
                 }
 
         if (redPeg == 4) {
-                trial++
-                revealSecret()
-                winLoose(redPeg)
-                glow()
+                trial++;
+                revealSecret();
+                winLoose(redPeg);
+                glow();
                 document.getElementById("submit").disabled = true;
-                document.getElementById("submit").classList.remove('submit-glow')
-                removeClick()
+                document.getElementById("submit").classList.remove('submit-glow');
+                removeClick();
 
         } else {
                 let white = whitePeg(playerGuess) - redPeg;
                 createRow(redPeg, white);
-                trial++
-                winLoose(redPeg)
-                glow()
+                trial++;
+                winLoose(redPeg);
+                glow();
                 document.getElementById("submit").disabled = true;
-                document.getElementById("submit").classList.remove('submit-glow')
+                document.getElementById("submit").classList.remove('submit-glow');
 
-                currentRow += 1
+                currentRow += 1;
 
                 let newHolders = document.getElementsByClassName(`${currentRow}`);
                 for (let newHolder of newHolders) {
@@ -232,7 +232,7 @@ function compareCodes() {
                 document.getElementById("submit").classList.remove('glow');
         }
 
-};
+}
 
 let modal = document.getElementById("popupModal");
 /**This modal will open if you lose or win*/
@@ -240,14 +240,14 @@ function winLoose(redPeg) {
 
         if (redPeg == 4) {
                 let textWin = `<div id="remove"><div class="image"><img src="assets/images/you-win.png" alt="The winner banner"></div>
-        <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Play again</button></div></div>`
+        <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Play again</button></div></div>`;
                 document.getElementById("modal-content").insertAdjacentHTML("beforeend", textWin);
                 modal.style.display = "block";
 
         } else if (trial == 12) {
-                revealSecret()
+                revealSecret();
                 let textLose = `<div id="remove"><div class="image"><img src="assets/images/you-lose.png" alt="The looser banner"></div>
-        <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Try again</button></div></div>`
+        <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Try again</button></div></div>`;
                 document.getElementById("modal-content").insertAdjacentHTML("beforeend", textLose);
                 modal.style.display = "block";
                 document.getElementById("submit").disabled = true;
@@ -270,7 +270,7 @@ function rulesPage1() {
         </span>
         </div>
         <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
-    </div>`
+    </div>`;
         document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
         modal.style.display = "block";
 }
@@ -293,7 +293,7 @@ function rulesPage1b() {
         </span>
         </div>
         <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
-    </div>`
+    </div>`;
         document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
         modal.style.display = "block";
 }
@@ -316,7 +316,7 @@ function rulesPage2() {
         </span>
         </div>
         <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
-    </div>`
+    </div>`;
         document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
         modal.style.display = "block";
 }
@@ -339,7 +339,7 @@ function rulesPage3() {
         </span>
         </div>
         <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
-    </div>`
+    </div>`;
         document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
         modal.style.display = "block";
 }
@@ -362,7 +362,7 @@ function rulesPage4() {
         </span>
         </div>
         <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
-    </div>`
+    </div>`;
         document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
         modal.style.display = "block";
 }
@@ -385,7 +385,7 @@ function rulesPage5() {
         </span>
         </div>
         <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
-    </div>`
+    </div>`;
         document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
         modal.style.display = "block";
 }
@@ -407,7 +407,7 @@ function rulesPage6() {
         </span>
         </div>
         <div class="play-container"><button class="play-again" onClick='closeModal();'>Continue</button></div>
-    </div>`
+    </div>`;
         document.getElementById("modal-content").insertAdjacentHTML("beforeend", textRules);
         modal.style.display = "block";
 }
@@ -422,7 +422,7 @@ window.onclick = function (event) {
                 // this line closes the modal
                 modal.style.display = "none";
         }
-}
+};
 
 // user clicks on (x) to close the modal. 
 let btnClose = document.getElementById("close");

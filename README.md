@@ -293,7 +293,7 @@ The score count could be added to motivate the user in beating either the CPU or
 [Back to top ⇧](#mastermind-game)
 
 ## Testing
-
+Refer to this [page](TESTING.md) please
 
 ## Deployment
 The site was developped on Gitpod, commiting and pushing to github.
