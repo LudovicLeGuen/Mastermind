@@ -239,7 +239,7 @@ let modal = document.getElementById("popupModal");
 function winLoose(redPeg) {
 
         if (redPeg == 4) {
-                let textWin = `<div id="remove"><div class="image"><img src="assets/images/you-win.png" alt="The winner banner"></div>
+                let textWin = `<div id="remove"><div class="image"><img src="assets/images/win2.PNG" alt="The winner banner"></div>
         <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Play again</button></div></div>`;
                 document.getElementById("modal-content").insertAdjacentHTML("beforeend", textWin);
                 modal.style.display = "block";

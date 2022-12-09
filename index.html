@@ -21,7 +21,7 @@
             </section>
 
             <!-- This user will pick the colors for his code here. This board will appear only when a game starts-->
-            <section class="color-picker">
+            <div class="color-picker">
                 <!-- The list of colors to click in order to create a color code-->
                 <div class="color blue"></div>
                 <div class="color red"></div>
@@ -29,8 +29,8 @@
                 <div class="color green"></div>
                 <div class="color orange"></div>
                 <div class="color purple"></div>
-            </section>
-            <section id="title-container">
+            </div>
+            <div id="title-container">
                 <div class="title">
                     <h2 onClick='location.reload();' style="cursor: pointer;">Refresh</h2><!-- Start and reset -->
                 </div>
@@ -38,209 +38,258 @@
                     <h2 onClick='rulesPage1();' style="cursor: pointer;">Rules</h2>
                     <!-- Rules button will open a Modal-->
                 </div>
-            </section>
-            <section id="secret-code">
+            </div>
+            <div id="secret-code">
                 <!-- This section will reveal itself when the user wins or looses-->
                 <div class="secret-color" id="secret-color-1"></div>
                 <div class="secret-color" id="secret-color-2"></div>
                 <div class="secret-color" id="secret-color-3"></div>
                 <div class="secret-color" id="secret-color-4"></div>
-            </section>
+            </div>
 
-            <section id="row12" class="row">
-                <span id="peg12" class="pegs">
+            <div id="row12" class="row">
+                <div id="peg12" class="pegs">
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
-                </span>
-                <span class="code-breaker">
+                </div>
+                <div class="code-breaker">
                     <div class="color-holder 12" onClick="changeColorKoko(event, 12, 'r12g1');" id="r12g1"></div>
                     <div class="color-holder 12" onClick="changeColorKoko(event, 12, 'r12g2');" id="r12g2"></div>
                     <div class="color-holder 12" onClick="changeColorKoko(event, 12, 'r12g3');" id="r12g3"></div>
                     <div class="color-holder 12" onClick="changeColorKoko(event, 12, 'r12g4');" id="r12g4"></div>
-                </span>
-                </span>
-            </section>
+                </div>
+            </div>
 
-            <section id="row11" class="row">
-                <span id="peg11" class="pegs">
+            <div id="row11" class="row">
+                <div id="peg11" class="pegs">
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
-                </span>
-                <span class="code-breaker">
+                </div>
+                <div class="code-breaker">
                     <div class="color-holder 11" onClick="changeColorKoko(event, 11, 'r11g1');" id="r11g1"></div>
                     <div class="color-holder 11" onClick="changeColorKoko(event, 11, 'r11g2');" id="r11g2"></div>
                     <div class="color-holder 11" onClick="changeColorKoko(event, 11, 'r11g3');" id="r11g3"></div>
                     <div class="color-holder 11" onClick="changeColorKoko(event, 11, 'r11g4');" id="r11g4"></div>
-                </span>
-            </section>
+                </div>
+            </div>
 
-            <section id="row10" class="row">
-                <span id="peg10" class="pegs">
+            <div id="row10" class="row">
+                <div id="peg10" class="pegs">
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
-                </span>
-                <span class="code-breaker">
+                </div>
+                <div class="code-breaker">
                     <div class="color-holder 10" onClick="changeColorKoko(event, 10, 'r10g1');" id="r10g1"></div>
                     <div class="color-holder 10" onClick="changeColorKoko(event, 10, 'r10g2');" id="r10g2"></div>
                     <div class="color-holder 10" onClick="changeColorKoko(event, 10, 'r10g3');" id="r10g3"></div>
                     <div class="color-holder 10" onClick="changeColorKoko(event, 10, 'r10g4');" id="r10g4"></div>
-                </span>
-            </section>
+                </div>
+            </div>
 
-            <section id="row9" class="row">
-                <span id="peg9" class="pegs">
+            <div id="row9" class="row">
+                <div id="peg9" class="pegs">
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
-                </span>
-                <span class="code-breaker">
+                </div>
+                <div class="code-breaker">
                     <div class="color-holder 9" onClick="changeColorKoko(event, 9, 'r9g1');" id="r9g1"></div>
                     <div class="color-holder 9" onClick="changeColorKoko(event, 9, 'r9g2');" id="r9g2"></div>
                     <div class="color-holder 9" onClick="changeColorKoko(event, 9, 'r9g3');" id="r9g3"></div>
                     <div class="color-holder 9" onClick="changeColorKoko(event, 9, 'r9g4');" id="r9g4"></div>
-                </span>
-            </section>
+                </div>
+            </div>
 
-            <section id="row8" class="row">
-                <span id="peg8" class="pegs">
+            <div id="row8" class="row">
+                <div id="peg8" class="pegs">
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
-                </span>
-                <span class="code-breaker">
+                </div>
+                <div class="code-breaker">
                     <div class="color-holder 8" onClick="changeColorKoko(event, 8, 'r8g1');" id="r8g1"></div>
                     <div class="color-holder 8" onClick="changeColorKoko(event, 8, 'r8g2');" id="r8g2"></div>
                     <div class="color-holder 8" onClick="changeColorKoko(event, 8, 'r8g3');" id="r8g3"></div>
                     <div class="color-holder 8" onClick="changeColorKoko(event, 8, 'r8g4');" id="r8g4"></div>
-                </span>
-            </section>
+                </div>
+            </div>
 
-            <section id="row7" class="row">
-                <span id="peg7" class="pegs">
+            <div id="row7" class="row">
+                <div id="peg7" class="pegs">
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
-                </span>
-                <span class="code-breaker">
+                </div>
+                <div class="code-breaker">
                     <div class="color-holder 7" onClick="changeColorKoko(event, 7, 'r7g1');" id="r7g1"></div>
                     <div class="color-holder 7" onClick="changeColorKoko(event, 7, 'r7g2');" id="r7g2"></div>
                     <div class="color-holder 7" onClick="changeColorKoko(event, 7, 'r7g3');" id="r7g3"></div>
                     <div class="color-holder 7" onClick="changeColorKoko(event, 7, 'r7g4');" id="r7g4"></div>
-                </span>
-            </section>
+                </div>
+            </div>
 
-            <section id="row6" class="row">
-                <span id="peg6" class="pegs">
+            <div id="row6" class="row">
+                <div id="peg6" class="pegs">
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
-                </span>
-                <span class="code-breaker">
+                </div>
+                <div class="code-breaker">
                     <div class="color-holder 6" onClick="changeColorKoko(event, 6, 'r6g1');" id="r6g1"></div>
                     <div class="color-holder 6" onClick="changeColorKoko(event, 6, 'r6g2');" id="r6g2"></div>
                     <div class="color-holder 6" onClick="changeColorKoko(event, 6, 'r6g3');" id="r6g3"></div>
                     <div class="color-holder 6" onClick="changeColorKoko(event, 6, 'r6g4');" id="r6g4"></div>
-                </span>
-            </section>
+                </div>
+            </div>
 
-            <section id="row5" class="row">
-                <span id="peg5" class="pegs">
+            <div id="row5" class="row">
+                <div id="peg5" class="pegs">
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
-                </span>
-                <span class="code-breaker">
+                </div>
+                <div class="code-breaker">
                     <div class="color-holder 5" onClick="changeColorKoko(event, 5, 'r5g1');" id="r5g1"></div>
                     <div class="color-holder 5" onClick="changeColorKoko(event, 5, 'r5g2');" id="r5g2"></div>
                     <div class="color-holder 5" onClick="changeColorKoko(event, 5, 'r5g3');" id="r5g3"></div>
                     <div class="color-holder 5" onClick="changeColorKoko(event, 5, 'r5g4');" id="r5g4"></div>
-                </span>
-            </section>
+                </div>
+            </div>
 
-            <section id="row4" class="row">
-                <span id="peg4" class="pegs">
+            <div id="row4" class="row">
+                <div id="peg4" class="pegs">
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
-                </span>
-                <span class="code-breaker">
+                </div>
+                <div class="code-breaker">
                     <div class="color-holder 4" onClick="changeColorKoko(event, 4, 'r4g1');" id="r4g1"></div>
                     <div class="color-holder 4" onClick="changeColorKoko(event, 4, 'r4g2');" id="r4g2"></div>
                     <div class="color-holder 4" onClick="changeColorKoko(event, 4, 'r4g3');" id="r4g3"></div>
                     <div class="color-holder 4" onClick="changeColorKoko(event, 4, 'r4g4');" id="r4g4"></div>
-                </span>
-            </section>
+                </div>
+            </div>
 
-            <section id="row3" class="row">
-                <span id="peg3" class="pegs">
+            <div id="row3" class="row">
+                <div id="peg3" class="pegs">
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
-                </span>
-                <span class="code-breaker">
+                </div>
+                <div class="code-breaker">
                     <div class="color-holder 3" onClick="changeColorKoko(event, 3, 'r3g1');" id="r3g1"></div>
                     <div class="color-holder 3" onClick="changeColorKoko(event, 3, 'r3g2');" id="r3g2"></div>
                     <div class="color-holder 3" onClick="changeColorKoko(event, 3, 'r3g3');" id="r3g3"></div>
                     <div class="color-holder 3" onClick="changeColorKoko(event, 3, 'r3g4');" id="r3g4"></div>
-                </span>
-            </section>
+                </div>
+            </div>
 
-            <section id="row2" class="row">
-                <span id="peg2" class="pegs">
+            <div id="row2" class="row">
+                <div id="peg2" class="pegs">
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
-                </span>
-                <span class="code-breaker">
+                </div>
+                <div class="code-breaker">
                     <div class="color-holder 2" onClick="changeColorKoko(event, 2, 'r2g1');" id="r2g1"></div>
                     <div class="color-holder 2" onClick="changeColorKoko(event, 2, 'r2g2');" id="r2g2"></div>
                     <div class="color-holder 2" onClick="changeColorKoko(event, 2, 'r2g3');" id="r2g3"></div>
                     <div class="color-holder 2" onClick="changeColorKoko(event, 2, 'r2g4');" id="r2g4"></div>
-                </span>
-            </section>
+                </div>
+            </div>
 
-            <section id="row1" class="row">
-                <span id="peg1" class="pegs">
+            <div id="row1" class="row">
+                <div id="peg1" class="pegs">
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
-                </span>
-                <span class="code-breaker">
+                </div>
+                <div class="code-breaker">
                     <div class="color-holder 1 glow" onClick="changeColorKoko(event, 1, 'r1g1');" id="r1g1"></div>
                     <div class="color-holder 1 glow" onClick="changeColorKoko(event, 1, 'r1g2');" id="r1g2"></div>
                     <div class="color-holder 1 glow" onClick="changeColorKoko(event, 1, 'r1g3');" id="r1g3"></div>
                     <div class="color-holder 1 glow" onClick="changeColorKoko(event, 1, 'r1g4');" id="r1g4"></div>
-                </span>
-            </section>
+                </div>
+            </div>
 
             <button type="button" aria-label="submit" id="submit" onClick="compareCodes();"><i
                     class="fa-solid fa-check"></i></button>
             <!-- the submit button will appear only when the four Code breaker colors will be inserted-->
         </div>
 
-        <div id="popupModal" class="modal">
+        <div id="rules-container">
+            <section class="rules">
+                <h2>Gameplay</h2>
+                <p>
+                    The player must guess the secret code by placing 4 colors in each highlighted row.</p>
+                <p>
+                    The player has up to 12 turns to crack the code and has 6 different colors to choose
+                    from.</p>
+                <p>
+                    Each round, the player creates a colors pattern in the highlighted row by clicking the
+                    spots several </p>
+                <p>
+                    When 4 colors are inserted, the "Submit" button will change color and become clickable.</p>
+                <p>
+                    After
+                    submision,
+                    the game checks if the colors are placed correctly and then gives up to
+                    4 clues.</p>
+            </section>
 
-            <!-- Modal content -->
-            <div id="modal-content">
-                <div id="close">&times;</div>
-            </div>
+            <section class="rules">
+                <h2>Clues</h2>
+                <p>
+                    The 4 dots displayed in a square next to the code preparation area serve as clues.<br> There are 3
+                    types of clue:</p>
 
+                <p>
+                    <ul>
+                        <li><b>Red</b> clue = there is a correct color in the correct place.</li>
+                        <li><b>White</b> clue = a correct color is in the wrong place.</li>
+                        <li>An <b>empty</b> clue = a wrong color has been chosen.</li>
+                    </ul>
+                </p>
+                <hr>
+            </section>
+
+            <section class="rules">
+
+                <h2><i class="fa-solid fa-triangle-exclamation"></i> WARNING <i
+                        class="fa-solid fa-triangle-exclamation"></i></h2>
+                The order of the clues does not refer to the position of the colors in the guess.<br>
+
+                That means, if the first two clues are red, the first two colors in the
+                guess are not automatically correct.
+
+            </section>
         </div>
+
+    </div>
+
+    <div id="popupModal" class="modal">
+
+        <!-- Modal content -->
+        <div id="modal-content">
+            <div id="close">&times;</div>
+        </div>
+
+    </div>
     </div>
 
     <!-- Footer -->

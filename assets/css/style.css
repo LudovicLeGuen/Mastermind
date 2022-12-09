@@ -7,16 +7,47 @@
 }
 
 body {
-    font-family: Cormorant, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     background-color: #EEA47F;
 }
 
 #container {
-    height: 100hv;
-    width: 100wv;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
+}
+
+#rules-container {
+    width: 50%;
+}
+
+.rules {
+    
+    font-size: 105%;
+    height: auto;
+    margin: 20px 0 0 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #00539C;
+    box-shadow: 10px 10px 30px rgb(0 0 0 / 80%);
+}
+
+.rules h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 4px #000;
+
+}
+
+.rules p {
+    margin-bottom: 10px;
+}
+
+.rules li {
+    margin-left: 30px;
 }
 
 #full-board {
@@ -34,6 +65,7 @@ body {
 #board-name {
     font-size: 200%;
     margin: 5px auto 0;
+    text-shadow: 4px 4px 4px #000;
 }
 
 #title-container {
@@ -49,6 +81,7 @@ body {
     margin: 5px auto;
     border: 3px outset;
     border-radius: 10px;
+    text-shadow: 2px 2px 2px #000;
 }
 
 /*hover effect taken from the website https://www.sliderrevolution.com*/
@@ -220,14 +253,12 @@ body {
 
 #submit {
     height: 50px;
-  
     border-radius: 10px;
-
     font-size: 350%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px 2px;
+    margin: auto 10px;
 }
 
 .submit-glow:hover {
@@ -350,7 +381,8 @@ body {
     font-size: 250%;
     margin: auto 4% auto 0;
 }
-.description{
+
+.description {
     width: 80%;
     height: auto;
 }
@@ -359,7 +391,7 @@ body {
     margin: 0 auto;
     max-width: 100%;
     max-height: 100%;
-    display: block; 
+    display: block;
 }
 
 .description h3 {
