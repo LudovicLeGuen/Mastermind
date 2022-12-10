@@ -20,13 +20,13 @@ body {
 }
 
 #rules-container {
-    width: 400px;
+    width: 380px;
 }
 
 .rules {
     font-size: 105%;
     height: auto;
-    margin: 20px 0 0 20px;
+    margin: 10px 0 0 20px;
     padding: 15px;
     border-radius: 15px;
     background-color: #00539C;
@@ -51,7 +51,7 @@ body {
 
 #full-board {
     height: auto;
-    margin-top: 20px;
+    margin-top: 10px;
     min-width: 350px;
     width: 20vw;
     border-radius: 15px;
@@ -340,7 +340,7 @@ body {
     margin: auto;
     padding: 20px;
     width: 80%;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     box-shadow: 10px 10px 30px rgb(0 0 0 / 80%);
