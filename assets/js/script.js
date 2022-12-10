@@ -246,7 +246,7 @@ function winLoose(redPeg) {
 
         } else if (trial == 12) {
                 revealSecret();
-                let textLose = `<div id="remove"><div class="image"><img src="assets/images/you-lose.png" alt="The looser banner"></div>
+                let textLose = `<div id="remove"><div class="image"><img src="assets/images/fail.PNG" alt="The looser banner"></div>
         <div class="play-container"><button class="play-again" onClick = 'location.reload();'>Try again</button></div></div>`;
                 document.getElementById("modal-content").insertAdjacentHTML("beforeend", textLose);
                 modal.style.display = "block";

@@ -30,7 +30,14 @@
                 <div class="color orange"></div>
                 <div class="color purple"></div>
             </div>
-            <div id="title-container">
+
+            <div class="title-container a">
+                <div class="title">
+                    <h2 onClick='location.reload();' style="cursor: pointer;">Refresh</h2><!-- Start and reset -->
+                </div>
+            </div>
+
+            <div class="b">
                 <div class="title">
                     <h2 onClick='location.reload();' style="cursor: pointer;">Refresh</h2><!-- Start and reset -->
                 </div>
@@ -39,6 +46,7 @@
                     <!-- Rules button will open a Modal-->
                 </div>
             </div>
+
             <div id="secret-code">
                 <!-- This section will reveal itself when the user wins or looses-->
                 <div class="secret-color" id="secret-color-1"></div>
@@ -227,8 +235,7 @@
                 </div>
             </div>
 
-            <button type="button" aria-label="submit" id="submit" onClick="compareCodes();"><i
-                    class="fa-solid fa-check"></i></button>
+            <button type="button" aria-label="submit" id="submit" onClick="compareCodes();"><i class="fa-solid fa-check"></i></button>
             <!-- the submit button will appear only when the four Code breaker colors will be inserted-->
         </div>
 
@@ -272,7 +279,7 @@
 
                 <h2><i class="fa-solid fa-triangle-exclamation"></i> WARNING <i
                         class="fa-solid fa-triangle-exclamation"></i></h2>
-                The order of the clues does not refer to the position of the colors in the guess.<br>
+                The clues order does not refer to the colors position in the guess.<br>
 
                 That means, if the first two clues are red, the first two colors in the
                 guess are not automatically correct.

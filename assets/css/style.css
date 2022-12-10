@@ -20,22 +20,21 @@ body {
 }
 
 #rules-container {
-    width: 50%;
+    width: 400px;
 }
 
 .rules {
-    
     font-size: 105%;
     height: auto;
-    margin: 20px 0 0 30px;
-    padding: 20px;
+    margin: 20px 0 0 20px;
+    padding: 15px;
     border-radius: 15px;
     background-color: #00539C;
     box-shadow: 10px 10px 30px rgb(0 0 0 / 80%);
 }
 
 .rules h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
     letter-spacing: 2px;
     text-shadow: 4px 4px 4px #000;
@@ -55,7 +54,7 @@ body {
     margin-top: 20px;
     min-width: 350px;
     width: 20vw;
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: #00539C;
     display: flex;
     flex-direction: column;
@@ -68,12 +67,34 @@ body {
     text-shadow: 4px 4px 4px #000;
 }
 
-#title-container {
+.title-container {
     width: 100%;
     margin: 15px 0;
     display: flex;
     flex-direction: row;
     text-align: center;
+}
+
+.b {
+    display: none
+}
+
+@media (max-width: 750px) {
+    .a {
+        display: none
+    }
+
+    .b {
+        width: 100%;
+        margin: 15px 0;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    #rules-container {
+        display: none
+    }
 }
 
 .title {
@@ -204,7 +225,7 @@ body {
     background-color: #00539C;
     width: 100%;
     height: 5px;
-    margin: 0 auto;
+    margin: 10px auto;
     margin-top: 10px;
 }
 
@@ -313,6 +334,7 @@ body {
 
 /* Modal Content */
 #modal-content {
+    font-family: Cormorant, sans-serif;
     background-color: #fefefe;
     color: #221c42;
     margin: auto;
