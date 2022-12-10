@@ -77,7 +77,7 @@
 ### Modals
 * The Win modal appears when the player breaks the code and clicking "play Again" starts a new game.
 
-     ![Win modal](assets/testing-files/win-modal-play.gif)
+     ![Win modal](assets/testing-files/win.gif)
 
 * The Lose modal appears when the player does not break the code after 12 turns. Clicking "Try again" restarts the game 
 
@@ -85,20 +85,12 @@
 
 * Losing or wining reveals the Code. 
 
-     ![Reveal Code](assets/testing-files/outclick-reveal.gif)     
+     ![Reveal Code](assets/testing-files/reveal.gif)     
 
 ### Responsiveness
 * Game
 
-     ![Game responsive test](assets/testing-files/game-responsive.gif)
-
-* Rules 
-
-     ![Rules responsive test](assets/testing-files/rules-responsive.gif)
-
-* Modal
-
-     ![Modal responsive test](assets/testing-files/modal-responsive.gif)
+     ![Game responsive test](assets/testing-files/responsive.gif)
 
 [Back to top](#Mastermind---Testing)
 
