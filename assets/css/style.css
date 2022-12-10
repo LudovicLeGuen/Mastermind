@@ -334,6 +334,7 @@ body {
 
 /* Modal Content */
 #modal-content {
+    font-size: 80%;
     font-family: Cormorant, sans-serif;
     background-color: #fefefe;
     color: #221c42;

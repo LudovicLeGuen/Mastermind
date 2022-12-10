@@ -1,5 +1,5 @@
 # mastermind-game
-![Mastermind on devices](assets/readme-files/amiresponsiveMaster.PNG)
+![Mastermind on devices](assets/readme-files/responsive.png)
 
 [Click here to access live project](https://ludovicleguen.github.io/Mastermind/)
 ## Table of contents

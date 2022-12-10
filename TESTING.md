@@ -26,19 +26,19 @@
 
 * As an experienced player, I want a website easy to navigate.
      * The information in the game are clear and in a single page
-     * the rules are simply laid out and the ability to consult them and join back the game improves the UX.
+     * the rules are simply laid out and the ability to consult them immediately improves the UX.
      
 * As an experienced player, I want to play a game instantaneously.
      * Again the one page approach and the design are so simple that an experience player will know instantly where to click and start a game.
 
 #### New User Goals:
 * As a new user, I want an intuitive and simple UI.
-     * The one page aproach makes thins simple and intutive. 
+     * The one page aproach makes things simple and intuitive. 
      * All labels are clear and the UI is simple with buttons changing colors when there purpose is met (Submit button).
 
 * As a new user, I want rules to be easily accessible.
-     * The rules are simply accessible through a single click. 
-     * The use of 1 modal with several pages including a illustration of each major rules is very simple to use and very clear to understand.
+     * The rules are immediately accessible for non mobile users and with one click for the mobile users. 
+     * The use of 1 modal with several pages including a illustration of each major rules is very simple to use and very clear to understand for mobile users.
 
 * As a new user, I want a site pleasing to the eye.
      * The color choice and the hover effects make the game pretty.
@@ -56,7 +56,7 @@
 ### Board Game
 * The Rules and Refresh buttons are animated when hovered.
 
-     ![Refresh and Rules](assets/testing-files/hover-buttons.gif) 
+     ![Refresh and Rules](assets/testing-files/hover.gif) 
 
 * The colors change when the spots are clicked.
 
