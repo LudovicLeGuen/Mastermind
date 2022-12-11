@@ -217,13 +217,13 @@ The website consists of a single page with all features visible at one (except m
 
 ![Rules button](assets/readme-files/rules.png)
 
-- **Secret code** The secret code is the goal of the game: users will play to break it. The secret color is revealed when the users break the code (and therefore wins) or when the users cannot break the code in less than 12 turns (and therefore lose). The secret code is randomly created at the beginning of each turn. The code can only contain 4 unique colors.
+- **Secret code** The secret code is the goal of the game: users will play to break it. The secret color is revealed when the users break the code (and therefore wins) or when the users cannot break the code in less than 12 turns (and therefore loses). The secret code is randomly created at the beginning of each turn. The code can only contain 4 unique colors.
 
 ![Secret code hidden](assets/readme-files/secret.png) 
 ![Secret code revealed](assets/readme-files/revealed.png) 
 
-- **Board rows** - The refresh button refreshes the page and essentially resets the game.There are 12 rows and the players fills each one up to crack the code. The users clicks on the holders to toggle the color and therefore create a color guess.
-In order to be clear to the user,rows are highlighted on at the time and the holder of this row are exclusively clickable. 
+- **Board rows** - The refresh button refreshes the page and essentially resets the game. There are 12 rows and the players fills each one up to crack the code. The users clicks on the holders to toggle the color and therefore create a color guess.
+In order to be clear to the user, rows are highlighted one at the time and only the holders of this row are clickable. 
 
 ![Board rows](assets/readme-files/rows.png)
 
@@ -291,8 +291,8 @@ The score count could be added to motivate the user in beating either the CPU or
 ## Issues and Bugs 
 During the development the debvelopper encountered several bugs and to his knowledge has corrected them all but one.
 ### Fixed Bugs
-- **The modals** - The use of modals prooved to be more painful than expexted. The developper used IDs and classes to caracterize each different modal. In other words, the developper intended to create several modals instead of using just one and fill it with different content.
-After several trials, the devlopper hascedcided to use different Template Literals wthat will fill the unique modal. 
+- **The modals** - The use of modals prooved to be more painful than expected. The developper used IDs and classes to caracterize each different modal. In other words, the developper intended to create several modals instead of using just one and fill it with different content.
+After several trials, the devlopper has decided to use different Template Literals wthat will fill the unique modal. 
 
 - **The modal pictures** - The modal pictures were overflowing the modal container when screens were too small. A simple change in css of the "description img" class fixed the problem with
     margin: 0 auto;
@@ -300,10 +300,10 @@ After several trials, the devlopper hascedcided to use different Template Litera
     max-height: 100%;
     display: block;
 
-- **The secret code random colors** - The secret code was able to have several identical in it. The same color could be used even 4 times. This caused problems with the clues. 
-As a matter of fact, th real Mastermind rules mention that the code creater must not use twice the same color. The random color function was modified to fix that issue. 
+- **The secret code random colors** - The secret code was able to have several identical colors in it. The same color could be used even 4 times. This caused problems with the clues. 
+As a matter of fact, the real Mastermind rules mention that the code creater must not use twice the same color. The random color function was modified to fix that issue. 
 
-- **The winning bug** - The users could still play after a win. If the user happened to close the Win Modal by clicking on the close button or outside the modal, they could still click on the colors pegs and therefore activate the submit button. The issue was fixed by createing a new function to set the onClick event to Null and therefore stop the game. 
+- **The winning bug** - The users could still play after a win. If the user happened to close the Win Modal by clicking on the close button or outside the modal, they could still select new colors and therefore activate the submit button. The issue was fixed by createing a new function to set the onClick event to Null and therefore stop the game. 
 
 ### Unfixed Bugs 
 

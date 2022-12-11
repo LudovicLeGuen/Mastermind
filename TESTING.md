@@ -54,7 +54,7 @@
      ![git links](assets/testing-files/footer.gif) 
     
 ### Board Game
-* The Rules and Refresh buttons are animated when hovered.
+* The Refresh button is animated when hovered.
 
      ![Refresh and Rules](assets/testing-files/hover.gif) 
 
@@ -70,7 +70,7 @@
 
      ![Refresh button](assets/testing-files/refresh.gif)
 
-* The rules open and navigate correctly. Closing them does not stop a game.
+* The rules on mobile open and navigate correctly. Closing them does not stop a game.
 
      ![Refresh button](assets/testing-files/rules.gif)
 
@@ -141,6 +141,8 @@ Special thanks to the following who tested and gave me their feedback and ideas 
 * Christopher Undritz (for spending so much time on reviewing my code and finding an important bug)
 * Roger Pfäffli (who is always a source of wisdom and fun)
 * Owonikoko Oluwaseun my mentor (the funniest and loveiest person. Cannot thank her enough for the guidance)
+
 And last, but definitely not the least!
 * My wife Domnika (who suffered me during the stressful times. Could not do it without her)
+
 ***
