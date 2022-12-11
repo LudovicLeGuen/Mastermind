@@ -20,9 +20,8 @@
                 <h1>Mastermind</h1> <!-- Board name -->
             </section>
 
-            <!-- This user will pick the colors for his code here. This board will appear only when a game starts-->
-            <div class="color-picker">
-                <!-- The list of colors to click in order to create a color code-->
+            <!-- The list of colors the users will use in the game-->
+            <div class="color-picker">                
                 <div class="color blue"></div>
                 <div class="color red"></div>
                 <div class="color yellow"></div>
@@ -31,38 +30,37 @@
                 <div class="color purple"></div>
             </div>
 
-            <div class="title-container a">
+            <div class="title-container a"> <!-- This container will appear on devices larger than 750px-->
                 <div class="title">
-                    <h2 onClick='location.reload();' style="cursor: pointer;">Refresh</h2><!-- Start and reset -->
+                    <h2 onClick='location.reload();' style="cursor: pointer;">Refresh</h2> <!-- Reset button-->
                 </div>
             </div>
 
-            <div class="b">
+            <div class="b"> <!-- this container appears only on devices smaller than 750px-->
                 <div class="title">
-                    <h2 onClick='location.reload();' style="cursor: pointer;">Refresh</h2><!-- Start and reset -->
+                    <h2 onClick='location.reload();' style="cursor: pointer;">Refresh</h2> <!-- Reset button-->
                 </div>
                 <div class="title">
-                    <h2 onClick='rulesPage1();' style="cursor: pointer;">Rules</h2>
-                    <!-- Rules button will open a Modal-->
+                    <h2 onClick='rulesPage1();' style="cursor: pointer;">Rules</h2> <!-- Rules button will open a Modal-->                
                 </div>
             </div>
 
             <div id="secret-code">
-                <!-- This section will reveal itself when the user wins or looses-->
+                <!-- This section will reveal itself when the user wins or loses-->
                 <div class="secret-color" id="secret-color-1"></div>
                 <div class="secret-color" id="secret-color-2"></div>
                 <div class="secret-color" id="secret-color-3"></div>
                 <div class="secret-color" id="secret-color-4"></div>
             </div>
 
-            <div id="row12" class="row">
-                <div id="peg12" class="pegs">
+            <div id="row12" class="row"> <!-- This div is repeated 12 times to represent each row in the game-->
+                <div id="peg12" class="pegs"> <!-- The 4 clue pegs-->
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                     <div class="peg-holder"></div>
                 </div>
-                <div class="code-breaker">
+                <div class="code-breaker"> <!-- Users will places their color guesses here-->
                     <div class="color-holder 12" onClick="changeColorKoko(event, 12, 'r12g1');" id="r12g1"></div>
                     <div class="color-holder 12" onClick="changeColorKoko(event, 12, 'r12g2');" id="r12g2"></div>
                     <div class="color-holder 12" onClick="changeColorKoko(event, 12, 'r12g3');" id="r12g3"></div>
@@ -236,13 +234,13 @@
             </div>
 
             <button type="button" aria-label="submit" id="submit" onClick="compareCodes();"><i
-                    class="fa-solid fa-check"></i></button>
-            <!-- the submit button will appear only when the four Code breaker colors will be inserted-->
+                    class="fa-solid fa-check"></i></button> <!-- the submit button will appear only when four colors will be inserted-->
+            
         </div>
 
-        <div id="rules-container">
+        <div id="rules-container"> <!-- This container holds the rules-->
             <section class="rules">
-                <h2>Gameplay</h2>
+                <h2>Gameplay</h2> <!-- Gameplay is general-->
 
                 <p>The player must guess the secret code by placing 4 colors in each highlighted row.</p>
 
@@ -259,7 +257,7 @@
             </section>
 
             <section class="rules">
-                <h2>Clues</h2>
+                <h2>Clues</h2> <!-- clues is about the clue pegs-->
                 <p>The 4 dots next to the color rows are clues.</p>
 
                 <ul>
@@ -273,7 +271,7 @@
             <section class="rules">
 
                 <h2><i class="fa-solid fa-triangle-exclamation"></i> WARNING <i
-                        class="fa-solid fa-triangle-exclamation"></i></h2>
+                        class="fa-solid fa-triangle-exclamation"></i></h2><!-- the warning section is actually very useful when you play the first time-->
 
                 <p>The clues order does not refer to the colors position in the guess.</p>
 
@@ -284,7 +282,7 @@
         </div>
     </div>
 
-    <div id="popupModal" class="modal">
+    <div id="popupModal" class="modal"> <!-- there is only 1 modal and it is dynamically filled with the appropriate content-->
 
         <!-- Modal content -->
         <div id="modal-content">
@@ -311,7 +309,7 @@
     <!-- font awesome kit-->
     <script src="https://kit.fontawesome.com/d16a3d2fb1.js" crossorigin="anonymous"></script>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script> <!-- script link is at the end to ensure the HTML is fully loaded before running JS-->
 </body>
 
 </html>

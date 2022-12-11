@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: center;
 }
-
+/* The main page Rules box styling*/
 #rules-container {
     width: 380px;
 }
@@ -48,7 +48,7 @@ body {
 .rules li {
     margin-left: 30px;
 }
-
+/*Styling of the board game*/
 #full-board {
     height: auto;
     margin-top: 10px;
@@ -61,6 +61,7 @@ body {
     box-shadow: 10px 10px 30px rgb(0 0 0 / 80%);
 }
 
+/*Mastermind Title*/
 #board-name {
     font-size: 200%;
     margin: 5px auto 0;
@@ -75,10 +76,21 @@ body {
     text-align: center;
 }
 
+/* Refresh and Rules buttons*/
+.title {
+    width: 30%;
+    margin: 5px auto;
+    border: 3px outset;
+    border-radius: 10px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+/* Hides the container with rules and refresh buttons */
 .b {
     display: none
 }
 
+/* Web responsivenes, hides the rules and shows the rules button */
 @media (max-width: 750px) {
     .a {
         display: none
@@ -95,14 +107,6 @@ body {
     #rules-container {
         display: none
     }
-}
-
-.title {
-    width: 30%;
-    margin: 5px auto;
-    border: 3px outset;
-    border-radius: 10px;
-    text-shadow: 2px 2px 2px #000;
 }
 
 /*hover effect taken from the website https://www.sliderrevolution.com*/
@@ -131,6 +135,7 @@ body {
     }
 }
 
+/* Secret code area*/
 #secret-code {
     margin-bottom: 15px;
     width: 100%;
@@ -139,12 +144,14 @@ body {
     height: auto;
 }
 
+/*Each row is based upon this class*/
 .row {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+/*each peg square area is based upon this class*/
 .pegs {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -154,6 +161,7 @@ body {
     margin: auto 0 auto 25px;
 }
 
+/*each empty peg is based upon this class*/
 .peg-holder {
     margin: auto;
     background-color: #221c42;
@@ -162,6 +170,7 @@ body {
     border-radius: 50px;
 }
 
+/*Each time a color in the guess is correctly placed this class will be used*/
 .red-peg {
     margin: auto;
     background-color: red;
@@ -170,6 +179,7 @@ body {
     border-radius: 50px;
 }
 
+/*Each time a color in the guess is misplaced this class will be used*/
 .white-peg {
     margin: auto;
     background-color: white;
@@ -178,6 +188,7 @@ body {
     border-radius: 50px;
 }
 
+/*This class represents the 4 colors spots the user will place a guess in */
 .code-breaker {
     display: grid;
     grid-template-columns: repeat(4, 25%);
@@ -187,6 +198,7 @@ body {
     margin: 5px 25px 5px 0;
 }
 
+/*This class is used to select the colors*/
 .color-holder {
     margin: auto;
     background-color: #003153;
@@ -195,18 +207,13 @@ body {
     border-radius: 50px;
 }
 
+/*This class is used to highlight the row in play*/
 .glow {
     box-shadow: 0 0 10px 9px #48abe0;
     cursor: pointer;
 }
 
-.color-print {
-    margin: auto;
-    height: 40px;
-    width: 40px;
-    border-radius: 50px;
-}
-
+/*This class is used to display the 6 colors at the top of the board*/
 .color-picker {
     display: grid;
     grid-template-columns: repeat(6, 16.66%);
@@ -223,7 +230,6 @@ body {
     border-radius: 10px;
     padding: 5px;
     margin: 2px;
-
 }
 
 .red {
@@ -261,6 +267,7 @@ body {
     margin: 2px;
 }
 
+/*Submit button CSS when not clickable*/
 #submit {
     height: 50px;
     border-radius: 10px;
@@ -271,13 +278,8 @@ body {
     margin: auto 10px;
 }
 
-.submit-glow:hover {
-    background-color: #adff2f;
-
-}
-
+/*Class used when 4 colors are selected*/
 .submit-glow {
-
     background-color: green;
     color: white;
     cursor: pointer;
@@ -286,6 +288,13 @@ body {
     animation: glow 1s ease-in-out infinite alternate;
 }
 
+/* used when the user hovers the clickable submit button*/
+.submit-glow:hover {
+    background-color: #adff2f;
+
+}
+
+/* Glow effect inspired by unused-css.com*/
 @-webkit-keyframes glow {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #41e600, 0 0 40px #41e600, 0 0 50px #41e600, 0 0 60px #41e600, 0 0 70px #41e600;
@@ -295,7 +304,6 @@ body {
         text-shadow: 0 0 20px #fff, 0 0 30px #4dff82, 0 0 40px #4dff82, 0 0 50px #4dff82, 0 0 60px #4dff82, 0 0 70px #4dff82, 0 0 80px #4dff82;
     }
 }
-
 
 /* The Modal (background) */
 .modal {
@@ -336,6 +344,7 @@ body {
     box-shadow: 10px 10px 30px rgb(0 0 0 / 80%);
 }
 
+/*Images in win and lose modals*/
 .image {
     display: flex;
     justify-content: center;
@@ -346,6 +355,7 @@ body {
     object-fit: contain;
 }
 
+/* Buttons in modals*/
 .play-container {
     display: flex;
     justify-content: center;
@@ -365,6 +375,7 @@ body {
     font-weight: bold;
 }
 
+/*Titles of each modal content*/
 .title-box {
     display: flex;
     justify-content: center;
@@ -375,6 +386,7 @@ body {
     font-size: 250%;
 }
 
+/*Section with each rules*/
 .rule-box {
     display: flex;
     flex-direction: row;
@@ -384,16 +396,19 @@ body {
     height: auto;
 }
 
+/*Left arrows*/
 .rule-box .left {
     font-size: 250%;
     margin: auto 0 auto 4%;
 }
 
+/*right arrow*/
 .rule-box .right {
     font-size: 250%;
     margin: auto 4% auto 0;
 }
 
+/*images in rules modal*/
 .description {
     width: 80%;
     height: auto;
@@ -406,6 +421,7 @@ body {
     display: block;
 }
 
+/*rules titles*/
 .description h3 {
     text-align: center;
     font-size: 175%;
