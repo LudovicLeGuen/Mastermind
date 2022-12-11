@@ -109,42 +109,42 @@ With the structure now in place the designer has created wireframes on [Balsamiq
 <details>
 <summary>Desktop Wireframes</summary>
     
-![Home page](assets/readme-files/desktop.png)
+![Desktop page](assets/readme-files/desktop.png)
 
 </details> 
 
 <details>
 <summary>Tablet Wireframes</summary>
     
-![About page](assets/readme-files/tablet.png)
+![Tablet page](assets/readme-files/tablet.png)
 
 </details> 
 
 <details>
 <summary>Mobile Wireframes</summary>
     
-![Sign up page](assets/readme-files/mobile.png)
+![Mobile page](assets/readme-files/mobile.png)
 
 </details> 
 
 <details>
 <summary>Winning Modal Wireframes</summary>
     
-![Sign up page](assets/readme-files/win-modal.png)
+![Win Modal page](assets/readme-files/win-modal.png)
 
 </details> 
 
 <details>
 <summary>loosing Modal Wireframes</summary>
     
-![Sign up page](assets/readme-files/loose-modal.png)
+![lose modal page](assets/readme-files/loose-modal.png)
 
 </details> 
 
 <details>
 <summary>Instructions Wireframes</summary>
     
-![Sign up page](assets/readme-files/rules-modal.png)
+![Rules modal page](assets/readme-files/rules-modal.png)
 
 </details> 
 
@@ -234,7 +234,7 @@ In order to be clear to the user,rows are highlighted on at the time and the hol
 - **Submit button** - The submit button "prints" the user choice and tells the system to compare the users guess with the secret code.
 In order to be clear and simple to use, the button is not clickable as long as the user has not chosen 4 different colors.
 
-![Submit button](assets/readme-files/rows.png)
+![Submit button](assets/readme-files/submit.png)
 
 - **The Modals** are a very important feature of the game. This is actually only one modal that is dynamically filled with content at opening and emptied when closed. Here is the different content:
         
@@ -314,8 +314,14 @@ As a matter of fact, th real Mastermind rules mention that the code creater must
 * HTML5
 * CSS3
 * Javascript
-### Frameworks, Libraries & Programs Used
 
+### Frameworks, Libraries & Programs Used
+- [Google Fonts](https://fonts.google.com/ "Link to Google Fonts") was used to import the "Cormorant" font.
+- [Font Awesome](https://fontawesome.com/ "Link to FontAwesome") was used for the several icons.
+- [GitPod](https://gitpod.io/ "Link to GitPod homepage") was used for writing, commiting, and pushing code.
+- [GitHub](https://github.com/ "Link to GitHub")
+- [Balsamiq](https://balsamiq.com/ "Link to Balsamiq homepage")
+- [Am I Responsive?](http://ami.responsivedesign.is/# "Link to Am I Responsive Homepage") was used to create the top picture of this README.md
 [Back to top ⇧](#mastermind-game)
 
 ## Testing
