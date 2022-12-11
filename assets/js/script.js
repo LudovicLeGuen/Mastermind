@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */  // this has been added to pass JSHINT 
+
 const colors = ["blue", "red", "yellow", "green", "orange", "purple"];
 let trial = 0;
 let final = randomCode();
@@ -46,8 +48,6 @@ function randomCode() {
         randomFinal.push(randomColor2);
         randomFinal.push(randomColor3);
         randomFinal.push(randomColor4);
-
-        console.log("this is the code to break" + randomFinal);
 
         return randomFinal;
 }
@@ -157,7 +157,7 @@ function glow() {
 
 /**
  * This function disables the onClick event. 
- * This is used when the user wins to prevent the buttons to be clicked
+ * This is used when the user wins to prevent the color holders to be clicked
  * if the user closes the win modal.
  */
 function removeClick() {
@@ -169,7 +169,7 @@ function removeClick() {
 
 /**
  * each turn the function populates the pegs holders 
- * accodring to the guess results
+ * according to the Player guess
  */
 function createRow(redPeg, white) {
         let target = document.getElementById(`peg${currentRow}`);
@@ -194,8 +194,7 @@ function createRow(redPeg, white) {
 
 /**
  * The function compares the user's guess array 
- * to the randomly generated array of color at
- * the start of the game.
+ * to the secret code array.
  */
 function compareCodes() {
         let playerGuess = createPlayerGuess();
@@ -222,9 +221,7 @@ function compareCodes() {
                 glow();
                 document.getElementById("submit").disabled = true;
                 document.getElementById("submit").classList.remove('submit-glow');
-
                 currentRow += 1;
-
                 let newHolders = document.getElementsByClassName(`${currentRow}`);
                 for (let newHolder of newHolders) {
                         newHolder.classList.add('glow');

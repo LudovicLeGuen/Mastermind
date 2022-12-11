@@ -96,47 +96,51 @@
 
 ## Automated Testing
 ### Code Validation
-* Home page W3C code validation 
+* HTML W3C code validation 
 
-![Home page code validation](assets/testing-files/validation/home-validation.gif)
-
-* About page W3C code validation 
-
-![About page code validation](assets/testing-files/validation/about-validation.gif)
-
-* Sign-up page W3C code validation 
-
-![Sign-up page code validation](assets/testing-files/validation/signup-validation.gif)
+![HTML code validation](assets/testing-files/validation/html-validator.gif)
 
 * CSS W3C code validation 
 
-![CSS code validation](assets/testing-files/validation/css-validation.gif)
+![CSS code validation](assets/testing-files/validation/css-validator.gif)
+
+* JS validation 
+
+![JS code validation](assets/testing-files/validation/js-validator.gif)
 
 * LightHouse validation 
 
-![Lighthouse code validation](assets/testing-files/lighthouse.PNG)
+![Lighthouse code validation](assets/testing-files/validation/lighthouse.gif)
 
 [Back to top](#Mastermind---Testing)
 
 ### Browser Validation
 * Chrome 
 
-![Chrome browser validation](assets/testing-files/chrome.png)
+![Chrome browser validation](assets/testing-files/validation/chrome.png)
 
 * Firefox 
 
-![Firefox browser validation](assets/testing-files/firefox.png)
+![Firefox browser validation](assets/testing-files/validation/firefox.png)
 
 * Opera 
 
-![Opera browser validation](assets/testing-files/opera.PNG)
+![Opera browser validation](assets/testing-files/validation/opera.png)
 
 * Edge 
 
-![Edge browser validation](assets/testing-files/homepage/edge.PNG)
+![Edge browser validation](assets/testing-files//validation/edge.png)
 
 [Back to top](#Mastermind---Testing)
 
 ## User testing 
-My wife Dominika and fellow coders at Code Institute participated in the tests. Special thanks to Callum Dennis, Gary Grant, Ed Bradley Christopher Undritz Roger Pfäffli and Koko my mentr for their feedback and ideas to improve the game.
+Special thanks to the following who tested and gave me their feedback and ideas to improve the game:
+* Callum Dennis (who held weekly calls and reviewed my work each time)
+* Gary Grant (who guided me when I was lost)
+* Ed Bradley (whose invaluable insight got me out of trouble more than once)
+* Christopher Undritz (for spending so much time on reviewing my code and finding an important bug)
+* Roger Pfäffli (who is always a source of wisdom and fun)
+* Owonikoko Oluwaseun my mentor (the funniest and loveiest person. Cannot thank her enough for the guidance)
+And last, but definitely not the least!
+* My wife Domnika (who suffered me during the stressful times. Could not do it without her)
 ***

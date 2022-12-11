@@ -139,14 +139,6 @@ body {
     height: auto;
 }
 
-.secret-color {
-    background-color: #221c42;
-    padding: 10px auto;
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-}
-
 .row {
     display: flex;
     justify-content: space-around;
@@ -165,7 +157,6 @@ body {
 .peg-holder {
     margin: auto;
     background-color: #221c42;
-    padding: 10px auto;
     height: 5px;
     width: 5px;
     border-radius: 50px;
@@ -174,7 +165,6 @@ body {
 .red-peg {
     margin: auto;
     background-color: red;
-    padding: 10px auto;
     height: 10px;
     width: 10px;
     border-radius: 50px;
@@ -183,7 +173,6 @@ body {
 .white-peg {
     margin: auto;
     background-color: white;
-    padding: 10px auto;
     height: 10px;
     width: 10px;
     border-radius: 50px;
